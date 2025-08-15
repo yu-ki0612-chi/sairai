@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+
+
+.scroll_down {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    display: block;
+    text-decoration: none;
+    /* transform: translate(-50%, -50%); */
+    font-size: 18px;
+    writing-mode: vertical-lr;
+}
+
+.wavy_arrow {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    transform: translate(-45deg);
+}
