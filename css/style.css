@@ -1,16 +1,18 @@
 @charset "utf-8";
 
-/* First View */
-
-.header_wrap {
-    margin-bottom: 120px;
+.body {
+    background-color: #fffff9;
+    /* background-blend-mode: ; */
 }
 
-.header_inner {
-    width: 100%;
-    height: 740px;
+/* First View */
+
+#header {
+    margin-bottom: 130px;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
 }
 
 .header_inner img.petal {
@@ -24,40 +26,39 @@
 
 /* 花びらの位置 */
 .petal1 {
-    left: 0px;
+    left: 5%;
     top: -15%;
     animation-delay: 0.3s;
 }
 
 .petal2 {
-    left: 481px;
-    top: 14%;
+    left: 41%;
+    top: 13%;
     animation-delay: 2.0s;
 }
 
 .petal3 {
-    left: 318px;
-    top: 48%;
+    right: 11.9%;
+    top: 33%;
     animation-delay: 2.7s;
 }
 
 .petal4 {
-    left: 1000px;
-    top: 33%;
+    left: 29%;
+    top: 47.7%;
     animation-delay: 3.4s;
 }
 
 .petal5 {
-    left: 1025px;
-    top: 5%;
+    right: 5%;
+    top: 4%;
     animation-delay: 4.1s;
 }
 
 h1.header_title img {
     position: absolute;
-    left: 75px;
-    top: 53%;
-    max-width: 320px;
+    left: 10.7%;
+    bottom: 3.75%;
     height: auto;
     opacity: 0;
     transform: translateY(20px);
@@ -98,6 +99,7 @@ h1.header_title img {
 
 .scroll_down {
     position: absolute;
+    margin-top: 130px;
     left: 50%;
     display: block;
     text-decoration: none;
@@ -108,7 +110,7 @@ h1.header_title img {
 
 .wavy_arrow {
     position: absolute;
-    top: 120%;
+    margin-top: 223px;
     left: 50%;
     width: 10px;
     height: 10px;
@@ -133,41 +135,53 @@ h1.header_title img {
 
 /* CONCEPT */
 
-.concept_inner1 img.leaf {
-    display: flex;
+.concept_wrap {
     position: relative;
-    height: auto;
-    /* opacity: 0; */
+    display: flex;
+    max-width: 100%;
+    padding-top: 100%;
+    margin-bottom: 165px;
+}
+
+.bg-img {
+    position: absolute;
 }
 
 .leaf_r {
-    position: absolute;
-    left: 48%;
-    top: 14%;
+    right: 5.7%;
+    top: 16%;
 }
 
 .leaf_l {
-    position: absolute;
-    left: 7%;
-    top: 17%;
+    left: 10.7%;
+    top: 31.5%;
 }
 
-.concept_content {
-    display: flex;
-    position: relative;
-    background: transparent;
+.lilac {
+    bottom: 10%;
+    right: 8%;
+}
 
+.pattern {
+    top: 90%;
+    right: 3%;
+}
+
+.dot {
+    bottom: 0%;
+    left: 12.5%;
 }
 
 .content_main {
     position: absolute;
+    flex-direction: row-reverse;
     writing-mode: vertical-rl;
-    background-color: none;
-    line-height: 4;
+    line-height: 3;
+    letter-spacing: 0.1em;
     font-size: 40px;
-    top: 1361px;
-    left: 49%;
-    white-space: nowrap;
+    top: 32%;
+    right: 19%;
+    gap: 15px;
     font-family: "貂明朝テキスト Regular", sans-serif;
 }
 
@@ -178,40 +192,18 @@ h1.header_title img {
 .content_sub {
     position: absolute;
     writing-mode: vertical-rl;
+    line-height: 3;
+    letter-spacing: 0.1em;
     font-size: 25px;
-    top: 1710px;
-    left: 15%;
-    white-space: nowrap;
+    top: 53%;
+    left: 14.7%;
+    gap: 15px;
 
 }
-
-.concept_content img.art {
-    position: relative;
-}
-
-.lilac {
-    position: absolute;
-    top: 1952px;
-    left: 50%;
-}
-
-.pattern {
-    position: absolute;
-    top: 2318px;
-    left: 81%;
-}
-
-.dot {
-    position: absolute;
-    top: 2482px;
-    left: 12.5%;
-}
-
 
 .lMenu_title {
     display: flex;
     position: sticky;
-    background: transparent;
     writing-mode: vertical-lr;
     font-size: 18px;
     font-family: "FOT-筑紫B丸ゴシック Std", sans-serif;
@@ -229,7 +221,6 @@ h1.header_title img {
 .side_nav ul {
     position: fixed;
     display: flex;
-    background: transparent;
     writing-mode: vertical-rl;
     top: 0;
     right: 0;
@@ -252,12 +243,20 @@ h1.header_title img {
     transition: opacity 0.3s;
 }
 
-.about_content {
+/* ABOUT*/
+
+.about_wrap {
+    margin-top: 140px;
     position: relative;
+    display: flex;
+    max-width: 100%;
+    padding-top: 100%;
 }
+
 
 .about_title {
     position: absolute;
+    flex-direction: row-reverse;
     writing-mode: vertical-rl;
     white-space: nowrap;
     font-size: 25px;
@@ -265,73 +264,132 @@ h1.header_title img {
 }
 
 .me {
-    top: 2625px;
-    left: 93%;
+    top: 0%;
+    right: 5%;
 }
 
 .origin {
-    top: 3222px;
-    left: 93%;
+    top: 38%;
+    right: 5%;
 }
 
 .trivia {
-    top: 3522px;
-    left: 42%;
+    top: 56%;
+    left: 41.5%;
 }
 
-.about_content img.illust {
-    position: relative;
+.about_subTitle {
+    position: absolute;
+    writing-mode: vertical-rl;
+    font-size: 18px;
+    color: #6ca1a2;
+    top: 53%;
+    right: 4.8%;
+}
+
+
+.text_profile {
+    writing-mode: vertical-rl;
+    font-size: 15px;
+    top: 3%;
+    right: 13.7%;
+}
+
+.text_origin {
+    writing-mode: vertical-rl;
+    right: 15%;
+    top: 39.6%;
+    font-size: 15px;
+}
+
+.text_trivia {
+    writing-mode: vertical-rl;
+    left: 17.7%;
+    font-size: 15px;
 }
 
 .photoMe {
     position: absolute;
     border-radius: 40px;
-    top: 2845px;
+    top: 14px;
     left: 9.6%;
 
 }
 
 .lilac2 {
     position: absolute;
-    top: 2869px;
-    left: 45%;
+    top: 41%;
+    right: 1%;
 
 }
 
 .lilac3 {
     position: absolute;
-    top: 3586px;
+    top: 60%;
     left: 12%;
 }
 
-.about_subTitle {
-    position: absolute;
-    writing-mode: vertical-rl;
-    white-space: nowrap;
-    font-size: 18px;
-    color: #6ca1a2;
-    top: 3463px;
-    left: 94%;
+
+
+/* WORKS */
+.works_wrap {
+    margin-top: 140px;
+    position: relative;
+    max-width: 100%;
+    padding-top: 100%;
 }
 
+.works_title {
+    font-size: 40px;
+    text-align: center;
+    color: #17439a;
+    margin-bottom: 16px;
+}
 
-/* お疲れ様です！途中まで作成してみたのですが、
-うまく持っていきたい位置に画像やテキストが配置できないので
-一旦提出させていただきます。
-ご確認よろしくお願いいたします。
-調べながらにやっているのでアニメーションがついている箇所もありますが、まだ自分のイメージとは違うので
-改めて調整したいと思います。
+.works_subTitle {
+    text-align: center;
+    font-size: 25px;
+    color: #6ca1a2;
+}
 
-質問
-1.右のナビメニューですや他メインテキスト等に背景がついてしまいます。また、フォントファミリーを指定しておりますが
-反映されません。なぜでしょうか。
-2.左の各タイトルがスクロールしてもついてきません。
-3.文字を縦配置にした際に、white-space: nowrap;を指定しないと２文字で折り返されてしまいます。
-文字同士の行間を取ろうと調整してみたのですが、反映されませんでした。
+.skill_inner {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
 
-4.わたしにできること欄の背景と全体的な背景のテクスチャ・HP一番下の花を
-アセットの書き出しでドラッグアンドドロップしたのですが
-反映されず書き出しができません。
-5.全体的にこのコードの内容はいらないというものがあれば教えていただきたいです。
+.ds_leaf {
+    top: 18.4%;
+    left: 10%;
+}
 
-/* よろしくお願いいたします！ */
+.cd_leaf {
+    top: 20%;
+    right: 10.7%;
+}
+
+.etc_leaf {
+    top: 61%;
+    left: 22%;
+}
+
+.deco_leaf {
+    top: 65.5%;
+    right: 17%;
+}
+
+.works_pieChart1 {
+    position: absolute;
+    display: flex;
+}
+
+.graph_ai {
+    top: 32%;
+    left: 18%;
+}
+
+.works_pieChart2 {
+    position: absolute;
+    display: flex;
+}
