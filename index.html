@@ -57,31 +57,54 @@
                 <img src="image_PF/CONCEPT_img.svg" alt="ライラック水彩画" class="bg-img lilac">
                 <img src="image_PF/CONCEPT_art.svg" alt="和柄模様" class="bg-img pattern">
             </div>
-            <img src="image_PF/dot_border.png" alt="ドット線" class="bg-img dot">
+            <div class="bg-imgdot">
+                <img src="image_PF/dot_border.png" alt="ドット線">
+            </div>
 
 
             <!-- スクロールすると切り替わるセクションタイトル -->
-            <div class="lMenu_title">
-                <div class="lMenuSide_labal">CONCEPT
+            <div class="lMain_progress">
+                <div class="cProgress">
+                    <div class="cProgress_sectionNav">CONCEPT</div>
                 </div>
-                <div class="lMenuSide_labal">ABOUT
+                <div class="cProgress">
+                    <div class="cProgress_sectionNav">ABOUT</div>
                 </div>
-                <div class="lMenuSide_labal">WORKS
+                <div class="cProgress">
+                    <div class="cProgress_sectionNav">WORKS</div>
                 </div>
-                <div class="lMenuSide_labal">CONTACT
+                <div class="cProgress">
+                    <div class="cProgress_sectionNav">CONTACT</div>
                 </div>
+
             </div>
+            <!-- <div class="lMain_progress">
+                <div class="cProgress">
+                    <div class="cProgress_bar">
+                        <div class="bar" id="jsProgressBar"
+                            style="translate: none; rotate: none; scale: none; transform: scale(0, 1);"></div>
+                    </div>
+                    <div class="cProgress_list">
+                        <div class="cProgress_item sectionNav" translate="no">CONCEPT</div>
+                        <div class="cProgress_item sectionNav" translate="no">ABOUT</div>
+                        <div class="cProgress_item sectionNav" translate="no">WORKS</div>
+                        <div class="cProgress_item sectionNav" translate="no">CONTACT</div>
+                    </div>
+                </div>
+
+            </div> -->
             <!-- ナビゲーションメニュー固定 -->
-            <nav class="side_nav">
-                <ul>
-                    <li><a href="#header">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#works">WORKS</a></li>
-                    <li><a href="#contact
+            <div class="l_header_right">
+                <nav class="nav_scrolled">
+                    <ul>
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#contact
                             ">CONTACT</a></li>
-                    <li><img src="image_PF/instagram.svg" alt="instagram"></li>
-                </ul>
-            </nav>
+                        <li><img src="image_PF/instagram.svg" alt="instagram"></li>
+                    </ul>
+                </nav>
             </div>
 
 
@@ -113,115 +136,243 @@
             </div>
             </div>
             <div class="about_container2">
-                <img src="image_PF/Ab_5lilac_r.svg" alt="ライラック" class="illust lilac2">
-                <img src="image_PF/Ab_5lilac_l.svg" alt="ライラック2" class="illust lilac3">
-                <h4 class="about_heading2">ネーミングの由来</h4>
-                <h5 class="about_sub_heading">-sairai-</h5>
-                <p class="about_content2">「たくさんの人と出会う中で自分の彩を咲かせ<br>
-                    られますように」という想いを込めた娘の名前<br>
-                    が由来になっています。娘の誕生花がライラック<br>
-                    ということライラックの花言葉には「幸運」な<br>
-                    どの意味合いがあることそのことから自身のHP<br>
-                    を作成するにあたり、娘のことを思ったサイト<br>
-                    を作りたいなと思い、「sairai]というネーミング<br>
-                    にしました。
-                </p>
-
-                <h4 class="about_heading3">豆知識</h4>
-                <p class="about_content3">
-                    ライラックの花びらは通常４枚ですが、稀に５<br>
-                    枚の花びらがあるそうです。これを「ハッピー<br>
-                    （ラッキー）ライラック」と呼ぶのだとか。５枚<br>
-                    の花びらを見つけるとしあわせが訪れると言わ<br>
-                    れているそうです。<br>
-                    あなたとわたしの出会いにも幸あれ</p>
-
+                <div class="about_block1">
+                    <div class="ab_heading_sumup">
+                        <h4 class="about_heading2">ネーミングの由来</h4>
+                        <h5 class="about_sub_heading">-sairai-</h5>
+                    </div>
+                    <p class="about_content2">「たくさんの人と出会う中で自分の彩を咲かせ<br>
+                        られますように」という想いを込めた娘の名前<br>
+                        が由来になっています。娘の誕生花がライラック<br>
+                        ということライラックの花言葉には「幸運」な<br>
+                        どの意味合いがあることそのことから自身のHP<br>
+                        を作成するにあたり、娘のことを思ったサイト<br>
+                        を作りたいなと思い、「sairai]というネーミング<br>
+                        にしました。
+                    </p>
+                </div>
+                <div class="about_block2">
+                    <h4 class="about_heading3">豆知識</h4>
+                    <p class="about_content3">
+                        ライラックの花びらは通常４枚ですが、稀に５<br>
+                        枚の花びらがあるそうです。これを「ハッピー<br>
+                        （ラッキー）ライラック」と呼ぶのだとか。<br>
+                        ５枚の花びらを見つけるとしあわせが訪れると<br>
+                        言われているそうです。<br>
+                        あなたとわたしの出会いにも幸あれ</p>
+                </div>
             </div>
 
-
+            <img src="image_PF/Ab_5lilac_r.svg" alt="ライラック" class="illust lilac2">
+            <img src="image_PF/Ab_5lilac_l.svg" alt="ライラック2" class="illust lilac3">
 
         </section>
-        <!-- Works -->
-        <section id="works" class="works_wrap">
-
-            <h2 class="works_title">わたしにできること</h2>
-            <h4 class="works_subTitle">-skill-</h4>
-            <div class="works_container1">
-                <div class="skill_inner1">
-                    <img src="image_PF/skill_ds_leaf.svg" alt="葉デザイン背景" class="ds_leaf">
-
-                    <div class="works_ds_text">
-                        <p class="desc_main_title1">Design</p>
-                        <p class="desc_text1
+        <!-- Skill -->
+        <section id="skill" class="skill_wrap">
+            <div class="skill_container">
+                <h2 class="skill_header">わたしにできること</h2>
+                <h4 class="skill_sub_header">-skill-</h4>
+                <div class="skill_container1">
+                    <div class="skill_inner1">
+                        <img src="image_PF/skill_ds_leaf.svg" alt="葉デザイン背景" class="ds_leaf">
+                        <div class="skill_block1">
+                            <div class="skill_ds_text1">
+                                <p class="desc_main_title1">Design</p>
+                                <p class="desc_text1
                     ">Webデザイン・バナーの制作のみだけでなく、<br>名刺やショップカードなどのデザインもご対応<br>いたします。お客様の想いをじっくりヒアリン<br>グするところからイメージをかたちにし、デザ<br>インを作成いたします。
-                        </p>
+                                </p>
+                            </div>
+
+                            <div class="skill_pieChart1">
+                                <img src="image_PF/sk_graph_ai.svg" alt="円グラフAI" class="graph_ai">
+                                <img src="image_PF/sk_graph_ps.svg" alt="円グラフPS" class="graph_ps">
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="works_pieChart1">
-                        <img src="image_PF/sk_graph_ai.svg" alt="円グラフAI" class="graph_ai">
-                        <img src="image_PF/sk_graph_ps.svg" alt="円グラフPS" class="graph_ps">
 
+                    <div class="skill_inner2">
+                        <img src="image_PF/skill_cd_leaf..svg" alt="葉コーディング背景" class="cd_leaf">
+                        <div class="skill_block2">
+                            <div class="skill_ds_text2">
+                                <p class="desc_main_title2">Coding</p>
+                                <p class="desc_text2
+                        ">HTML/CSSを使用し、デザインを再現いたし<br>ます。JavaScriptを使用した動きのあるサイトも<br>ご対応可能です。レスポンシブにも対応してお<br>ります。
+                                </p>
+                            </div>
+
+                            <div class="skill_pieChart2">
+                                <img src="image_PF/sk_graph_html.svg" alt="円グラフHTML" class="graph_html">
+                                <img src="image_PF/sk_graph_css.svg" alt="円グラフCSS" class="graph_css">
+                                <img src="image_PF/sk_graph_js.svg" alt="円グラフ" class="graph_js" width="104px"
+                                    height="95px">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-
-                <div class="skill_inner2">
-                    <img src="image_PF/skill_cd_leaf..svg" alt="葉コーディング背景" class="cd_leaf">
-
-                    <div class="works_ds_text">
-                        <p class="desc_main_title2">Coding</p>
-                        <p class="desc_text2
-                        ">HTML/CSSを使用し、デザインを再現いたし<br>ます。JavaScriptを使用した動きのあるサイトも<br>ご対応可能です。レスポンシブにも対応してお<br>ります
-                        </p>
-                    </div>
-
-                    <div class="works_pieChart2">
-                        <img src="image_PF/sk_graph_html.svg" alt="円グラフHTML" class="graph_html">
-                        <img src="image_PF/sk_graph_css.svg" alt="円グラフCSS" class="graph_css">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="works_container2">
-                <div class="skill_inner3">
-                    <img src="image_PF/skill_etc_leaf..svg" alt="葉その他背景" class="etc_leaf">
-
-                    <div class="works_ds_text">
-                        <p class="desc_main_title3">Et cetera.</p>
-                        <p class="desc_text3
+                <div class="skill_container2">
+                    <div class="skill_inner3">
+                        <img src="image_PF/skill_etc_leaf..svg" alt="葉その他背景" class="etc_leaf">
+                        <div class="skill_ds_text3">
+                            <p class="desc_main_title3">Et cetera.</p>
+                            <p class="desc_text3
                         ">その他、Figmaやcanvaを学習中で、<br>開発環境はVScode/GitHubを使用可能<br>です。連絡ツールはChatwork使用可能<br>です。
-                        </p>
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="skill_inner4">
+                        <img src="image_PF/skill_leaf..svg" alt="葉装飾" class="deco_leaf">
+
                     </div>
                 </div>
-
-                <div class="skill_inner4">
-                    <img src="image_PF/skill_leaf..svg" alt="葉装飾" class="deco_leaf">
-
-                </div>
             </div>
-
-
-
-
-
-
 
         </section>
+
+        <!-- WORKS -->
+        <section id="works" class="works_wrap
+        ">
+            <h2 class="works_header">WORKS</h2>
+            <div class="works_container">
+                <ul>
+                    <li>
+                        <div class="wk_block">
+                            <a href="">
+                                <p class="works_number">01
+                                    <span class="works_name">DESIGN CAFE
+
+                                    </span>
+                                </p>
+                                <img src="image_PF/wk_cafe1.png" alt="DESIGN CAFE">
+                                <p class="works_lead">#Coding</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wk_block">
+                            <a href="">
+                                <p class="works_number">02
+                                    <span class="works_name">LIFE hair design
+
+                                    </span>
+                                </p>
+                                <img src="image_PF/wk_life2.png" alt="LIFE hair design">
+                                <p class="works_lead">#LP design</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wk_block">
+                            <a href="">
+                                <p class="works_number">03
+                                    <span class="works_name">ICE CREAM
+
+                                    </span>
+                                </p>
+                                <img src="image_PF/wk_ice3.png" alt="ICE CREAM">
+                                <p class="works_lead">#Bunner design</p>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <!-- <div class="wk_block">
+                            <a href="">
+                                <p class="works_number">04
+                                    <span class="works_name">SPRING SALE
+
+                                    </span>
+                                </p>
+                                <img src="image_PF/wk_spring4.png" alt="SPRING SALE">
+                                <p class="works_lead">#Bunner design</p>
+                            </a>
+                        </div>
+                    </li> -->
+                </ul>
+                <a href="">
+                    <p class="works_btn">一覧を見る</p>
+                </a>
+
+            </div>
+
+        </section>
+        <div class="bg-imgdot2">
+            <img src="image_PF/dot_border.png" alt="ドット線">
+        </div>
 
         <!-- Contact -->
-        <section id="contact">
+        <section id="contact" class="contact_wrap">
+            <div class="contact_container">
+                <div class="block1">
+                    <div class="contact_heading">
+                        <h3>CONTACT</h3>
+                        <p>ご相談・ご依頼お待ちしております。</p>
+                    </div>
+                    <div class="link1"><a href="">
+                            <p class="contact_btn">相談する</p>
+                        </a>
 
+                    </div>
+                </div>
+                <div class="block2">
+                    <div class="contact_heading">
+                        <h3>FOLLOW US</h3>
+                        <p>SNSでも情報の発信をしております</p>
+                    </div>
+                    <div class="link2">
+                        <a href=""><img src="image_PF/instagram.svg" alt=""><br>
+                            <span>instagram</span></a>
+                    </div>
+                </div>
 
         </section>
+
+        <div class="modal_container">
+            <div class="modal_body">
+                <div class="modal_content">
+                    <div class="inn">
+                        <span class="title">
+                            <h4>LP DESIGN</h4>
+                        </span>
+                    </div>
+                    <div class="works_lp"><img src="" alt="LIFE hair design">
+                    </div>
+                </div>
+                <!-- テキスト -->
+                <div class=""></div>
+                <button type="button" class="modal_close"></button>
+            </div>
+        </div>
+
     </main>
     <!-- Footer -->
-    <img src="image_PF/footer_img.svg" alt="">
-    <footer>
+    <footer class="footer_wrap">
+        <div class="footer-container">
+            <div class="deco_lilac">
+                <img src="image_PF/footer_lilac.svg" alt="ライラック画像" width="231px" ,height="150px">
+            </div>
+
+
+            <p class="copyright">©sairai design</p>
 
     </footer>
 
 
+    </main>
+
+    <script>
+
+        // works
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 3.2,
+            spaceBetween: 20,
+            centeredSlides: false,
+            loop: true,
+        }) 
+    </script>
 </body>
 
 </html>

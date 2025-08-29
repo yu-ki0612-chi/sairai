@@ -1,8 +1,9 @@
 @charset "utf-8";
 
 .body {
-    background-color: #fffff9;
-    /* background-blend-mode: ; */
+    background-blend-mode: #fffff9 url(./image_PF/all_bg.svg)center top;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* First View */
@@ -162,12 +163,12 @@ h1.header_title img {
     position: absolute;
     flex-direction: row-reverse;
     writing-mode: vertical-rl;
-    line-height: 4;
+    line-height: 2;
     letter-spacing: 0.1em;
     font-size: 40px;
     top: 48%;
     right: 29%;
-    /* gap: 15px; */
+    white-space: nowrap;
     font-family: "貂明朝テキスト Regular", sans-serif;
 }
 
@@ -178,12 +179,12 @@ h1.header_title img {
 .content_sub {
     position: absolute;
     writing-mode: vertical-rl;
-    line-height: 3;
+    white-space: nowrap;
+    line-height: 2;
     letter-spacing: 0.1em;
     font-size: 25px;
     top: 70%;
     left: 16.9%;
-    gap: 15px;
 
 }
 
@@ -192,55 +193,136 @@ h1.header_title img {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 150px 97px 0 0;
+    margin: 150px 0px 92px 0;
 }
 
-.dot {
+.bg-imgdot {
     text-align: center;
 }
 
 /* スクロールすると切り替わるセクションタイトル */
 
-.lMenu_title {
-    display: flex;
+.lMain_progress {
+    box-sizing: border-box;
+    width: 3%;
+}
+
+.lMain_progress .cProgress {
+    padding: 15px;
+}
+
+.lMain_progress .cProgress_sectionNav {
     position: sticky;
-    writing-mode: vertical-lr;
-    font-size: 18px;
-    font-family: "FOT-筑紫B丸ゴシック Std", sans-serif;
-    height: 100vh;
-
+    top: 0;
+    writing-mode: vertical-rl;
 
 }
 
-.lMenuSide_labal {
+/* .lMain_progress {
+    position: sticky;
+    top: 0;
+    width: 3%;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.cProgress {
+    pointer-events: none;
+    user-select: none;
     align-items: center;
-    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: min(38rem);
+    opacity: 1;
+    transition: .4s ease opacity;
+}
+
+.cProgress_bar {
+    width: 230px;
+    height: 2px;
+    background: var(--gray2);
+}
+
+.cProgress_bar .bar {
+    transform-origin: right;
+    width: 100%;
+    height: 100%;
+    background: var(--gray);
 
 }
+
+.cProgress_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    z-index: 0;
+    width: 140px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.cProgress_item .sectionNav {
+    transform: translate(0);
+}
+
+.cProgress_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    color: var(--gray);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    transition: .4s cubic-bezier(.65, 0, .35, 1)transform;
+    transform: none;
+    padding: 0 16px;
+    width: max-content;
+    height: max-content;
+    box-sizing: border-box;
+    writing-mode: vertical-rl;
+} */
 
 /* ナビゲーッションメニュー固定 */
-.side_nav ul {
-    position: fixed;
-    display: flex;
-    writing-mode: vertical-rl;
-    top: 0;
-    right: 0;
-    width: 80px;
-    height: 100vh;
+.l_header {
     font-family: "FOT-筑紫B丸ゴシック Std", sans-serif;
+    letter-spacing: .06em;
+
+}
+
+.l_header_right {
+    right: 0;
+    padding-top: 25px;
+    position: fixed;
+    top: 0;
+    width: 3%;
+    height: 100%;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.nav_sctolled {
+    pointer-events: auto;
+    text-align: center;
+    left: 50%;
+    top: 50%;
     font-size: 18px;
     margin: 30%;
     margin-right: 2%;
 }
 
-.side_nav li {
+.nav_scrolled li {
+    display: block;
     align-items: center;
-    margin: 20px 0;
+    margin: 56px 0;
 
 }
 
-.side_nav a {
-    text-decoration: none;
+.nav_scrolled a {
+    display: block;
+    writing-mode: vertical-rl;
     transition: opacity 0.3s;
 }
 
@@ -252,6 +334,7 @@ h1.header_title img {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    position: relative;
 
 }
 
@@ -260,6 +343,7 @@ h1.header_title img {
     display: flex;
     justify-content: flex-end;
     max-width: 1200px;
+
 }
 
 .photoMe {
@@ -267,6 +351,7 @@ h1.header_title img {
     border-radius: 40px;
     left: 9.75%;
     top: 60%;
+    z-index: 1;
 
 }
 
@@ -284,6 +369,8 @@ h1.header_title img {
     font-size: 15px;
     line-height: 2.5;
     padding-top: 46px;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -291,16 +378,29 @@ h1.header_title img {
 .about_container2 {
     display: flex;
     position: relative;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-direction: row-reverse;
     max-width: 1200px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+.about_block1 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.ab_heading_sumup {
+    display: flex;
+    flex-direction: column;
 }
 
 .about_heading2 {
     writing-mode: vertical-rl;
-    flex-direction: row-reverse;
     font-size: 25px;
     color: #17439a;
+    padding-bottom: 24px;
+    z-index: 10;
 }
 
 .about_sub_heading {
@@ -313,67 +413,86 @@ h1.header_title img {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-size: 15px;
+    line-height: 2.5;
+    z-index: 10;
+    padding-right: 78px;
 }
 
 .lilac2 {
-    top: 15%;
+    position: absolute;
+    top: 21%;
     right: 0%;
+    z-index: 1;
+}
+
+.about_block2 {
+    display: flex;
+    flex-direction: row-reverse;
+
 }
 
 .about_heading3 {
     writing-mode: vertical-rl;
     font-size: 25px;
     color: #17439a;
+    margin-top: 248px;
+    margin-left: 44px;
+    z-index: 10;
 }
 
 .about_content3 {
     writing-mode: vertical-rl;
     font-size: 15px;
+    margin-top: 294px;
+    padding-left: 214px;
+    line-height: 2.5;
+    position: relative;
+    z-index: 10;
 }
 
 .lilac3 {
     position: absolute;
-    top: 48%;
-    left: 12%;
+    top: 78%;
+    left: 11%;
+    z-index: 1;
 
 }
 
 
 
-/* WORKS */
+/* SKILL */
 
-/* #works {
-    margin-top: 140px;
-} */
-
-.works_wrap {
-    background-image: url(../image_PF/all_bg.svg);
-    background-repeat: repeat;
+.skill_wrap {
+    background-image: url(../image_PF/sk_bg_img.svg);
+    background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100% auto;
-    z-index: 3;
-    max-width: 1200px;
+    background-size: 100% 100%;
+    z-index: 1;
     width: 100%;
-    padding: 120px 0 96px 0;
+    margin: 120px 0 96px 0;
     flex-wrap: wrap;
     margin: 0 auto;
 
 }
 
-.works_title {
+.skill_container {
+    max-width: 1200px;
+}
+
+.skill_header {
     font-size: 40px;
     text-align: center;
     color: #17439a;
     margin: 118px 0 16px 0;
 }
 
-.works_subTitle {
+.skill_sub_header {
     text-align: center;
     font-size: 25px;
     color: #6ca1a2;
 }
 
-.works_container1 {
+.skill_container1 {
     display: flex;
     justify-content: center;
     gap: 140px;
@@ -381,55 +500,73 @@ h1.header_title img {
 
 .skill_inner1 {
     position: relative;
+    width: 33.8%;
 
 }
 
 .ds_leaf {
-    width: 33.8%;
-    padding-top: 167px;
+    width: 100%;
 
 }
 
-.works_ds_text {
+.skill_block1 {
     position: absolute;
+    top: 24.7%;
+    left: 13.6%;
+
 }
 
 .desc_main_title1 {
     font-size: 20px;
-    top: 25%;
-    left: 13.7%;
 }
 
 .desc_text1 {
     font-size: 15px;
-    top: 36.9%;
-    left: 13.7%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    line-height: 1.8;
+
 }
+
+.skill_pieChart1 {
+    padding-left: 42px;
+}
+
+.graph_ps {
+    padding-left: 27px;
+}
+
 
 .skill_inner2 {
     position: relative;
-
+    width: 35.5%;
 }
 
 .cd_leaf {
-    padding-top: 188px;
-    width: 35.5%;
+    width: 100%;
+
+}
+
+.skill_block2 {
+    position: absolute;
+    top: 35.5%;
+    left: 15%;
 }
 
 .desc_main_title2 {
     font-size: 20px;
-    top: 33.9%;
-    left: 15%;
 }
 
 .desc_text2 {
     font-size: 15px;
-    top: 44.6%;
-    left: 15%;
+    padding-top: 27px;
+    padding-bottom: 35px;
+    line-height: 1.8;
 }
 
 
-.works_container2 {
+
+.skill_container2 {
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -438,39 +575,344 @@ h1.header_title img {
 .skill_inner3 {
     position: relative;
     width: 30.5%;
+    padding-top: 56px;
+}
+
+.skill_ds_text3 {
+    position: absolute;
+    top: 30.8%;
+    left: 15%;
 }
 
 .desc_main_title3 {
     font-size: 20px;
-    top: 33%;
-    left: 15%;
 }
 
 .desc_text3 {
     font-size: 15px;
-    top: 48, 6%;
-    left: 15%;
+    padding-top: 30px;
+    line-height: 1.8;
 }
 
 .skill_inner4 {
     width: 25%;
+    padding-top: 58px;
 }
 
-/* 
-お世話になっております。
-AboutとWorksの配置をしてみたのですがうまくいきませんでした。
-いくつか質問があります。
-①コンセプト欄の葉に載せる文章が変なところで折り返されてしまい、brタグをつけていても反映されません。
-また、コンセプト欄の左の葉に載せる文章も
-本来の改行とは違う箇所で折り返されてしまいます。
-②セクションを区切るために配置した点線がセンターに配置できません。
-③Aboutの上側にだいぶ余白が開いてしまってどのように調整したら良いかわかりませんでした。
-④Aboutの水彩画像の上にテキストを重ねたいのですが、どのように指定したらテキストが画像の上になりますか？
-⑤Aboutの花の位置の調整とテキストの配置が難しく教えていただきたいです。
-⑥わたしにできることの背景を書き出ししていただいたのですが背景が波になっておらず直線なのはCSSでの調整が必要でしょうか。
+/* WORKS */
+.works_wrap {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 
-⑦４つの葉の配置自体はなんとかできたのですが、葉が小さくなってしまったことと、テキストが葉に乗せられませんでした。
+}
 
-考えても調べても今の状態から脱出できそうになかったので一度添削いただけますと幸いです。よろしくお願いいたします。
+.works_header {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 260px;
+    margin-bottom: 150px;
+    color: #17439a;
+}
 
-*/
+.works_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+}
+
+.works_container li {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+    white-space: nowrap;
+}
+
+.wk_block {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.wk_block::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+
+
+.works_number {
+    font-size: 40px;
+    color: #17439a;
+}
+
+.works_name {
+    font-size: 18px;
+    color: #999999;
+}
+
+.wk_block img {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.works_lead {
+    font-size: 18px;
+}
+
+.wk_block:hover::before {
+    background-color: rgba(223, 194, 0, 0.45);
+
+}
+
+.works_btn {
+    display: block;
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 2px;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 178px;
+    right: 43.9%;
+    letter-spacing: 0.1rem;
+
+
+
+}
+
+.works_btn.reverse:hover {
+    background: #fff;
+    color: #34719f;
+}
+
+.bg-imgdot2 {
+    text-align: center;
+    margin-top: 253px;
+}
+
+/* CONTACT */
+.contact_wrap {
+    padding-top: 385px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contact_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 263px;
+}
+
+.block1 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.link1 {
+    margin-top: 75px;
+    margin-left: 30%;
+}
+
+.contact_btn {
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 2px;
+    width: 150px;
+    height: 50px;
+}
+
+.contact_btn.reverse:hover {
+    background: #fff;
+    color: #34719f;
+}
+
+.block2 {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contact_heading h3 {
+    font-size: 30px;
+    color: #17439a;
+    line-height: 140%;
+    margin-bottom: 24px;
+    font-weight: normal;
+    letter-spacing: .06em;
+
+}
+
+.contact_heading p {
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.link2 img {
+    margin-top: 76px;
+}
+
+/* Footer */
+.footer_wrap {
+    width: 100%;
+    background: url(../image_PF/footer_img.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    color: #444;
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.footer_container {
+    max-width: 1200px;
+}
+
+
+.deco_lilac {
+    text-align: right;
+    margin-right: 0;
+    padding-bottom: 216px;
+}
+
+.copyright {
+    position: absolute;
+    font-size: 15px;
+    bottom: 13%;
+    right: 2%;
+
+}
+
+/* WORKS PAGE */
+
+.works_header h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 260px;
+    margin-bottom: 150px;
+    color: #17439a;
+}
+
+.works_container1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+
+}
+
+.works_container1 li {
+    float: left;
+    width: 30%;
+    box-sizing: border-box;
+    transition: 0.3s ease all;
+    white-space: nowrap;
+}
+
+.wk_block1 {
+    position: relative;
+    width: 325px;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.works_number1 {
+    font-size: 40px;
+    color: #17439a;
+}
+
+.works_name1 {
+    font-size: 18px;
+    color: #999999;
+}
+
+.wk_block1 img {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.wk_block1:hover::before {
+    background-color: rgba(223, 194, 0, 0.45);
+
+}
+
+.works_btn {
+    display: block;
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 2px;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    top: 178px;
+    right: 43.9%;
+    letter-spacing: 0.1rem;
+}
+
+.works_btn.reverse:hover {
+    background: #fff;
+    color: #34719f;
+}
+
+
+.works_contact_btn {
+    display: block;
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 2px;
+    width: 260px;
+    height: 50px;
+    position: absolute;
+    top: 178px;
+    right: 43.9%;
+    letter-spacing: 0.1rem;
+}
+
+
+
+/* CONTACT PAGE */
+.contact_text1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact_text2 {
+    font-size: 18px;
+    padding-top: 35px;
+    text-align: left;
+}
