@@ -767,10 +767,11 @@ h1.header_title img {
     background: url(../image_PF/footer_img.svg);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100% 100%;
+    background-size: cover;
     color: #444;
     padding-bottom: 24px;
     position: relative;
+    height: 400px;
 }
 
 .footer_container {
@@ -787,7 +788,9 @@ h1.header_title img {
     height: 150px;
     text-align: right;
     margin-right: 0;
-    padding-bottom: 216px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 @keyframes fuwafuwa {
