@@ -26,12 +26,24 @@
             </h1>
         </div>
 
-
     </header>
 
-    <div class="scroll_down">SCROLL</div>
-    <div class="wavy_arrow"></div>
+    <div class="scroll">
+        <span class="txt">Scroll</span>
+    </div>
+
     <main>
+        <!-- スクロールすると切り替わるセクションタイトル -->
+        <div class="lMain_progress">
+            <div class="cProgress">
+                <div class="cProgress_sectionNav">CONCEPT</div>
+                <div class="cProgress_sectionNav">ABOUT</div>
+                <div class="cProgress_sectionNav">SKILL</div>
+                <div class="cProgress_sectionNav">WORKS</div>
+                <div class="cProgress_sectionNav">CONTACT</div>
+            </div>
+
+        </div>
 
         <!-- Concept -->
         <section id="concept" class="concept_wrap">
@@ -62,37 +74,6 @@
             </div>
 
 
-            <!-- スクロールすると切り替わるセクションタイトル -->
-            <div class="lMain_progress">
-                <div class="cProgress">
-                    <div class="cProgress_sectionNav">CONCEPT</div>
-                </div>
-                <div class="cProgress">
-                    <div class="cProgress_sectionNav">ABOUT</div>
-                </div>
-                <div class="cProgress">
-                    <div class="cProgress_sectionNav">WORKS</div>
-                </div>
-                <div class="cProgress">
-                    <div class="cProgress_sectionNav">CONTACT</div>
-                </div>
-
-            </div>
-            <!-- <div class="lMain_progress">
-                <div class="cProgress">
-                    <div class="cProgress_bar">
-                        <div class="bar" id="jsProgressBar"
-                            style="translate: none; rotate: none; scale: none; transform: scale(0, 1);"></div>
-                    </div>
-                    <div class="cProgress_list">
-                        <div class="cProgress_item sectionNav" translate="no">CONCEPT</div>
-                        <div class="cProgress_item sectionNav" translate="no">ABOUT</div>
-                        <div class="cProgress_item sectionNav" translate="no">WORKS</div>
-                        <div class="cProgress_item sectionNav" translate="no">CONTACT</div>
-                    </div>
-                </div>
-
-            </div> -->
             <!-- ナビゲーションメニュー固定 -->
             <div class="l_header_right">
                 <nav class="nav_scrolled">
@@ -234,69 +215,49 @@
         </section>
 
         <!-- WORKS -->
-        <section id="works" class="works_wrap
-        ">
+        <section id="works">
             <h2 class="works_header">WORKS</h2>
-            <div class="works_container">
-                <ul>
-                    <li>
-                        <div class="wk_block">
-                            <a href="">
-                                <p class="works_number">01
-                                    <span class="works_name">DESIGN CAFE
+            <div class="works_slider_wrap">
 
-                                    </span>
-                                </p>
-                                <img src="image_PF/wk_cafe1.png" alt="DESIGN CAFE">
-                                <p class="works_lead">#Coding</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wk_block">
-                            <a href="">
-                                <p class="works_number">02
-                                    <span class="works_name">LIFE hair design
+                <div class="works_block">
+                    <div class="works_number">01</div>
+                    <div class="works_title">DESIGN CAFE
+                    </div>
+                    <div class="works_image_wrap"> <img src="image_PF/wk_cafe1.png" alt="LP design"></div>
+                    <div class="works_lead">#Coding</div>
+                </div>
 
-                                    </span>
-                                </p>
-                                <img src="image_PF/wk_life2.png" alt="LIFE hair design">
-                                <p class="works_lead">#LP design</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="wk_block">
-                            <a href="">
-                                <p class="works_number">03
-                                    <span class="works_name">ICE CREAM
+                <div class="works_block">
+                    <div class="works_number">02</div>
+                    <div class="works_title">LIFE hair design </div>
+                    <div class="works_image_wrap"><img src="image_PF/wk_life2.png" alt="LIFE hair design"></div>
+                    <div class="works_lead">#LP design</div>
+                </div>
 
-                                    </span>
-                                </p>
-                                <img src="image_PF/wk_ice3.png" alt="ICE CREAM">
-                                <p class="works_lead">#Bunner design</p>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <!-- <div class="wk_block">
-                            <a href="">
-                                <p class="works_number">04
-                                    <span class="works_name">SPRING SALE
+                <div class="works_block">
+                    <div class="works_number">03</div>
+                    <div class="works_title">ICE CREAM</div>
 
-                                    </span>
-                                </p>
-                                <img src="image_PF/wk_spring4.png" alt="SPRING SALE">
-                                <p class="works_lead">#Bunner design</p>
-                            </a>
-                        </div>
-                    </li> -->
-                </ul>
-                <a href="">
-                    <p class="works_btn">一覧を見る</p>
-                </a>
+                    <div class="works_image_wrap"><img src="image_PF/wk_ice3.png" alt="ICE CREAM"></div>
+                    <div class="works_lead">#Bunner design</div>
+                </div>
+
+                <div class="works_block">
+                    <div class="works_number">04</div>
+                    <div class="works_title">SPRING SALE</div>
+
+                    <div class="works_image_wrap"><img src="image_PF/wk_spring4.png" alt="SPRING SALE"></div>
+                    <div class="works_lead">#Bunner design</div>
+                </div>
 
             </div>
+            <div class="works_btn">
+                <a href="./works/index.html">
+                    一覧を見る</a>
+            </div>
+
+            </div>
+
 
         </section>
         <div class="bg-imgdot2">
@@ -306,53 +267,106 @@
         <!-- Contact -->
         <section id="contact" class="contact_wrap">
             <div class="contact_container">
-                <div class="block1">
+                <div class="contact_block">
                     <div class="contact_heading">
                         <h3>CONTACT</h3>
                         <p>ご相談・ご依頼お待ちしております。</p>
                     </div>
-                    <div class="link1"><a href="">
-                            <p class="contact_btn">相談する</p>
-                        </a>
-
-                    </div>
+                    <div class="contact_btn"><a href="./contact.html">
+                            相談する
+                        </a></div>
                 </div>
-                <div class="block2">
+                <div class="follow_block">
                     <div class="contact_heading">
                         <h3>FOLLOW US</h3>
                         <p>SNSでも情報の発信をしております</p>
                     </div>
-                    <div class="link2">
+                    <div class="follow_link">
                         <a href=""><img src="image_PF/instagram.svg" alt=""><br>
                             <span>instagram</span></a>
                     </div>
                 </div>
 
         </section>
+        <!-- モーダルウィンドウ全体を囲むコンテナ -->
+        <div id="js_modal" class="modal">
 
-        <div class="modal_container">
-            <div class="modal_body">
-                <div class="modal_content">
-                    <div class="inn">
-                        <span class="title">
-                            <h4>LP DESIGN</h4>
-                        </span>
+            <!-- モーダルヘッダー -->
+            <div class="modal_wrap">
+                <div class="modal_content_header">
+                    <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                alt="ロゴ"></a></div>
+                    <div class="modal_title">
+                        <h3>LP DESIGN</h3>
                     </div>
-                    <div class="works_lp"><img src="" alt="LIFE hair design">
+                    <!-- モーダルイメージ画像 -->
+                    <div class="mockUp_image">
+                        <img src="image_PF/modal_1x/pc_wk2.png" alt="モックアップ画像">
                     </div>
                 </div>
-                <!-- テキスト -->
-                <div class=""></div>
-                <button type="button" class="modal_close"></button>
+                <!-- モーダルテキスト -->
+                <div class="modal_text_container">
+                    <h5>サロンHP[LIFE hair design](架空)</h5>
+
+                    <div class="modal_works_text">
+                        <ul class="modal_works_category">
+                            <li>担当範囲 デザイン</li>
+                            <li>制作期間 1〜2週間</li>
+                            <li>使用ツール IIIustrator/Photoshop</li>
+                        </ul>
+                        <div class="modal_works_detail">
+                            <p class="modal_works_summary">
+                                全体はコーポレートカラーであるピンクをアク<br>セントカラーに優しく柔らかい印象に仕上げ<br>ました。ファーストビューを1枚写真に切り取り<br>写真を重ねることで一瞬目をひくインパクトあ<br>るサイトを表現しました。
+                            </p>
+                        </div>
+                    </div>
+                    <!-- モーダルサムネイル画像 -->
+                    <div class="image_thumbnail">
+                        <img src="image_PF/modal_1x/アセット 45-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                        <img src="image_PF/modal_1x/アセット 46-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                    </div>
+                    <!-- モーダル前ページ・次ページ -->
+                    <div class="modal_arrow">
+                        <div class="back-arrow next-arrow">
+                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+
+                        </div>
+                        <div class="next-arrow ">
+                            <img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                        </div>
+                    </div>
+                    <div class="modal_guidance">
+                        <p>PREV DESIGN</p>
+                        <p>NEXT DESIGN</p>
+                    </div>
+                </div>
+                <!-- モーダルからお問い合わせへ -->
+                <div class="modal_contact_container">
+                    <div class="modal_contact_block">
+                        <div class="modal_contact_heading">
+                            <h3>CONTACT</h3>
+                            <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                            <p class="text2">お気軽にお問い合わせください</p>
+                        </div>
+                        <div class="modal_contact_btn"><a href="./contact.html">
+                                お問い合わせはこちら
+                            </a></div>
+                    </div>
+                </div>
+                <!-- モーダル閉じるボタン -->
+                <button id="close_button" class="modal_close_icon"></button>
             </div>
+            <div class="modal_close">Close</div>
         </div>
+        </div>
+
+
 
     </main>
     <!-- Footer -->
     <footer class="footer_wrap">
         <div class="footer-container">
-            <div class="deco_lilac">
-                <img src="image_PF/footer_lilac.svg" alt="ライラック画像" width="231px" ,height="150px">
+            <div class="fuwafuwa_lilac">
             </div>
 
 
@@ -365,13 +379,55 @@
 
     <script>
 
-        // works
-        const swiper = new Swiper('.swiper', {
-            slidesPerView: 3.2,
-            spaceBetween: 20,
-            centeredSlides: false,
-            loop: true,
-        }) 
+        // JavaScript
+        // WORKS
+        $(document).ready(function () {
+            $('.works_slider_wrap').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 1,
+                            slidersToScroll: 1,
+                            infinite: true,
+                        }
+                    }]
+            });
+        });
+
+        $(function () {
+            function scrollNav() {
+                let scrollY = $(window).scrollTop();
+                let section = $('main > section');
+
+                $('.cProgress_sectionNav').css('opacity', 0);
+
+                if (scrollY < $(section[0]).offset().top) {
+                    $('.cProgress_sectionNav').eq(0).css('opacity', 1);
+                } else {
+                    section.each(function (index) {
+                        let sectionTop = $(this).offset().top;
+                        let sectionBottom = sectionTop + $(this).outerHeight();
+
+                        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+                            $('.cProgress_sectionNav').eq(index).css('opacity', 1);
+                            return false;
+                        }
+                    });
+                }
+            }
+
+            scrollNav()
+
+            $(window).on('scroll', function () {
+                scrollNav()
+            });
+        })
+
     </script>
 </body>
 

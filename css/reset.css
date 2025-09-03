@@ -17,7 +17,7 @@ ul,
 li {
     margin: 0;
     padding: 0;
-    line-height: 1;
+    line-height: 1.75;
     /*デフォルトの文字色、font-familyを予めあてておく*/
     color: #444;
     font-family: "FOT-筑紫A丸ゴシック Std", "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "MS Ｐ明朝", "MS 明朝", serif;
@@ -46,8 +46,8 @@ img {
 
 /* a:hover {
     opacity: 0.5;
-}
+} */
 
 html {
     scroll-behavior: smooth;
-} */
+}

@@ -95,42 +95,55 @@ h1.header_title img {
     }
 }
 
-
-
-
-.scroll_down {
-    position: absolute;
-    margin-top: 130px;
-    left: 50%;
-    display: block;
-    text-decoration: none;
-    transform: translate(-50%, -50%);
-    font-size: 18px;
-    writing-mode: vertical-lr;
+/* スクロール */
+.scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    position: relative;
 }
 
-.wavy_arrow {
+.txt {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.scroll::before {
+    animation: scroll 3.5s infinite;
+    border: solid #444;
+    border-width: 0 0 1px 1px;
+    content: "";
+    display: inline-block;
+    margin: auto;
     position: absolute;
-    margin-top: 223px;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    border-left: 1px solid #444;
-    border-bottom: 1px solid #444;
-    transform: translateY(50%) rotate(-45deg);
-    animation: float 2s infinite;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
 
 }
 
-@keyframes float {
+@keyframes scroll {
 
-    0%,
-    100% {
-        transform: translateY(-20%) rotate(-45deg);
+    0% {
+        transform: rotate(-45deg) translate(0, 0);
     }
 
-    50% {
-        toransform: translateY(20%) rotate(-45deg);
+    80% {
+        transform: rotate(-45deg) translate(-30px, 30px);
+    }
+
+    0%,
+    80%,
+    100% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
     }
 }
 
@@ -163,13 +176,17 @@ h1.header_title img {
     position: absolute;
     flex-direction: row-reverse;
     writing-mode: vertical-rl;
-    line-height: 2;
     letter-spacing: 0.1em;
     font-size: 40px;
-    top: 48%;
-    right: 29%;
+    top: 43%;
+    right: 20%;
     white-space: nowrap;
     font-family: "貂明朝テキスト Regular", sans-serif;
+}
+
+.content_main p {
+    line-height: 1.8;
+
 }
 
 .content_main span {
@@ -180,14 +197,17 @@ h1.header_title img {
     position: absolute;
     writing-mode: vertical-rl;
     white-space: nowrap;
-    line-height: 2;
     letter-spacing: 0.1em;
     font-size: 25px;
-    top: 70%;
+    top: 83%;
     left: 16.9%;
 
 }
 
+.content_sub p {
+    line-height: 2.3;
+
+}
 
 .bg-img_wrap {
     display: flex;
@@ -205,87 +225,43 @@ h1.header_title img {
 .lMain_progress {
     box-sizing: border-box;
     width: 3%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lMain_progress::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100px;
+    background: black;
 }
 
 .lMain_progress .cProgress {
-    padding: 15px;
+    /* padding: 15px; */
+    height: 100px;
+    width: 100%;
+    position: relative;
 }
 
 .lMain_progress .cProgress_sectionNav {
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     writing-mode: vertical-rl;
-
-}
-
-/* .lMain_progress {
-    position: sticky;
-    top: 0;
-    width: 3%;
-    z-index: 999;
-    box-sizing: border-box;
-}
-
-.cProgress {
-    pointer-events: none;
-    user-select: none;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: min(38rem);
-    opacity: 1;
-    transition: .4s ease opacity;
-}
-
-.cProgress_bar {
-    width: 230px;
-    height: 2px;
-    background: var(--gray2);
-}
-
-.cProgress_bar .bar {
-    transform-origin: right;
-    width: 100%;
-    height: 100%;
-    background: var(--gray);
-
-}
-
-.cProgress_list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    z-index: 0;
-    width: 140px;
-    height: 32px;
-    overflow: hidden;
-}
-
-.cProgress_item .sectionNav {
-    transform: translate(0);
-}
-
-.cProgress_item {
+    /* display: none; */
     position: absolute;
     top: 0;
-    left: 0;
-    z-index: 0;
-    color: var(--gray);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 2;
-    transition: .4s cubic-bezier(.65, 0, .35, 1)transform;
-    transform: none;
-    padding: 0 16px;
-    width: max-content;
-    height: max-content;
-    box-sizing: border-box;
-    writing-mode: vertical-rl;
-} */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    opacity: 0;
+}
 
-/* ナビゲーッションメニュー固定 */
+/* ナビゲーションメニュー固定 */
 .l_header {
     font-family: "FOT-筑紫B丸ゴシック Std", sans-serif;
     letter-spacing: .06em;
@@ -303,14 +279,16 @@ h1.header_title img {
     box-sizing: border-box;
 }
 
-.nav_sctolled {
+.nav_scrolled {
+    transform: translateY(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+}
+
+.nav_scrolled {
+    opacity: 1;
     pointer-events: auto;
-    text-align: center;
-    left: 50%;
-    top: 50%;
-    font-size: 18px;
-    margin: 30%;
-    margin-right: 2%;
 }
 
 .nav_scrolled li {
@@ -599,7 +577,7 @@ h1.header_title img {
     padding-top: 58px;
 }
 
-/* WORKS */
+/* WORKS Slider*/
 .works_wrap {
     max-width: 1200px;
     width: 100%;
@@ -615,32 +593,23 @@ h1.header_title img {
     color: #17439a;
 }
 
-.works_container {
+.works_slider_wrap {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding: 0;
-    margin: 0;
-
+    gap: 64px;
 }
 
-.works_container li {
-    float: left;
+.works_block {
+    position: relative;
     width: 30%;
     box-sizing: border-box;
     transition: 0.3s ease all;
     white-space: nowrap;
 }
 
-.wk_block {
-    position: relative;
-    width: 325px;
-    height: 325px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-.wk_block::before {
+.works_block::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -656,47 +625,59 @@ h1.header_title img {
 .works_number {
     font-size: 40px;
     color: #17439a;
+    margin-top: -22px;
+    z-index: 2;
 }
 
-.works_name {
+.works_title {
     font-size: 18px;
     color: #999999;
+    text-align: right;
+    z-index: 2;
 }
 
-.wk_block img {
+.works_block img {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     height: auto;
     text-align: center;
     margin-bottom: 32px;
 }
 
 .works_lead {
+    position: absolute;
+    text-align: right;
     font-size: 18px;
+    z-index: 2;
 }
 
-.wk_block:hover::before {
+
+.works_block:hover::before {
     background-color: rgba(223, 194, 0, 0.45);
+    z-index: 0;
+    position: relative;
 
 }
 
 .works_btn {
-    display: block;
-    background-color: #34719f;
-    color: #fff;
-    font-size: 15px;
+    margin-top: 178px;
     text-align: center;
+}
+
+.works_btn a {
+    display: inline-block;
+    background-color: #34719f;
+
     border-radius: 2px;
     width: 150px;
-    height: 50px;
-    position: absolute;
-    top: 178px;
-    right: 43.9%;
+    padding: 20px 0;
     letter-spacing: 0.1rem;
-
-
+    color: #fff;
+    font-size: 15px;
 
 }
+
+
 
 .works_btn.reverse:hover {
     background: #fff;
@@ -722,15 +703,16 @@ h1.header_title img {
     margin-bottom: 263px;
 }
 
-.block1 {
-    float: left;
+.contact_block {
     width: 50%;
     box-sizing: border-box;
     padding-left: 30px;
     padding-right: 30px;
+    align-items: center;
+
 }
 
-.link1 {
+.contact_link {
     margin-top: 75px;
     margin-left: 30%;
 }
@@ -742,15 +724,17 @@ h1.header_title img {
     text-align: center;
     border-radius: 2px;
     width: 150px;
-    height: 50px;
+    padding: 20px 0;
+    margin-top: 73px;
+    cursor: pointer;
 }
 
 .contact_btn.reverse:hover {
-    background: #fff;
+    background-color: #fff;
     color: #34719f;
 }
 
-.block2 {
+.follow_block {
     float: left;
     width: 50%;
     box-sizing: border-box;
@@ -766,6 +750,7 @@ h1.header_title img {
     font-weight: normal;
     letter-spacing: .06em;
 
+
 }
 
 .contact_heading p {
@@ -773,7 +758,7 @@ h1.header_title img {
     font-size: 16px;
 }
 
-.link2 img {
+.follow_link img {
     margin-top: 76px;
 }
 
@@ -794,10 +779,31 @@ h1.header_title img {
 }
 
 
-.deco_lilac {
+.fuwafuwa_lilac {
+    animation: fuwafuwa 3s ease-in-out infinite alternate;
+    background: url(../image_PF/footer_lilac.svg) no-repeat center center/231px 150px;
+    display: inline-block;
+    transition: 1.5s ease-in-out;
+    width: 231px;
+    height: 150px;
     text-align: right;
     margin-right: 0;
     padding-bottom: 216px;
+}
+
+@keyframes fuwafuwa {
+    0% {
+        transform: translate(0, 0) rotate(-7deg);
+
+    }
+
+    50% {
+        transform: translate(0, -7px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(7deg);
+    }
 }
 
 .copyright {
@@ -809,64 +815,90 @@ h1.header_title img {
 }
 
 /* WORKS PAGE */
+.works_header #header {
+    max-width: 1200px;
+}
 
-.works_header h2 {
+.works_page .works_header {
+    background-image: url(../image_PF/bg_semicircle.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.header_logo {
+    margin-top: 74px;
+    margin-left: 62px;
+    text-align: left;
+}
+
+.works_page .works_title {
     font-size: 40px;
     text-align: center;
-    margin-top: 260px;
-    margin-bottom: 150px;
+    margin-top: 225px;
+    margin-bottom: 88px;
     color: #17439a;
 }
 
-.works_container1 {
+.works_area {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.works_unit {
     display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-
-}
-
-.works_container1 li {
-    float: left;
-    width: 30%;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     box-sizing: border-box;
-    transition: 0.3s ease all;
-    white-space: nowrap;
+
 }
 
-.wk_block1 {
+.works_box {
     position: relative;
+    max-width: 325px;
     width: 325px;
     height: 325px;
+    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
+    background-color: #d3cce5;
 }
 
-.works_number1 {
+.works_box p {
+    margin-bottom: -20px;
+}
+
+.works_number {
     font-size: 40px;
     color: #17439a;
 }
 
-.works_name1 {
+.works_name {
     font-size: 18px;
     color: #999999;
+    text-align: right;
 }
 
-.wk_block1 img {
+.works_unit img {
     position: relative;
+    aspect-ratio: 1/1;
     z-index: 1;
     height: auto;
     text-align: center;
     margin-bottom: 32px;
 }
 
-.wk_block1:hover::before {
+.works_unit :hover::before {
     background-color: rgba(223, 194, 0, 0.45);
 
 }
 
-.works_btn {
+.works_btn2 {
     display: block;
     background-color: #34719f;
     color: #fff;
@@ -874,18 +906,19 @@ h1.header_title img {
     text-align: center;
     border-radius: 2px;
     width: 150px;
-    height: 50px;
-    position: absolute;
-    top: 178px;
-    right: 43.9%;
-    letter-spacing: 0.1rem;
+    padding: 20px 0;
+    margin-top: 220px;
+    margin-bottom: 270px;
 }
 
-.works_btn.reverse:hover {
+.works_btn2.reverse:hover {
     background: #fff;
     color: #34719f;
 }
 
+.contact_container {
+    max-width: 1200px;
+}
 
 .works_contact_btn {
     display: block;
@@ -895,24 +928,352 @@ h1.header_title img {
     text-align: center;
     border-radius: 2px;
     width: 260px;
-    height: 50px;
-    position: absolute;
-    top: 178px;
-    right: 43.9%;
-    letter-spacing: 0.1rem;
+    padding: 20 0ß;
+    cursor: pointer;
+
 }
 
+/* MODAL PAGE */
+.modal {
+
+    max-width: 1110px;
+}
+
+.modal_content_header {
+    background-image: url(../image_PF/bg_semicircle.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    position: relative;
+
+}
+
+.modal_header_logo {
+    position: absolute;
+    top: 11%;
+    left: 6%;
+}
+
+.modal_title h3 {
+    font-size: 30px;
+    color: #444;
+    text-align: center;
+    margin-top: 236px;
+    margin-bottom: 88px;
+}
+
+.mockUp_image {
+    text-align: center;
+}
+
+.modal_text_container {
+    max-width: 1110px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.modal_text_container h5 {
+    padding: 42px 0 42px 42px;
+    font-size: 18px;
+}
+
+.modal_text_container::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #34719f;
+    position: absolute;
+    top: 7%;
+    left: 20%;
+    transform: translateX(-45%);
+}
+
+.modal_works_text {
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+}
+
+.modal_works_category {
+    width: 44%;
+}
+
+.ul {
+    list-style: none;
+}
+
+.modal_works_category li:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.image_thumbnail {
+    display: block;
+    text-align: center;
+    margin-top: 154px;
+    margin-bottom: 174px;
+}
+
+.image_thumbnail .SP_img {
+    margin-top: 92px;
+}
+
+.modal_arrow {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 147px;
+}
+
+.modal_guidance p {
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+}
+
+.modal_contact_container {
+    max-width: 1110px;
+    margin-top: 130px;
+}
+
+.modal_contact_heading {
+    text-align: center;
+}
+
+.modal_contact_heading h3 {
+    font-size: 30px;
+    color: #17439a;
+    margin-bottom: 59px;
+
+}
+
+.modal_contact_heading .text1 {
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.modal_contact_heading .text2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.modal_contact_btn {
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 2px;
+    width: 260px;
+    padding: 20px 0;
+    margin-top: 73px;
+    cursor: pointer;
+
+}
+
+.modal_contact_btn.reverse:hover {
+    background-color: #fff;
+    color: #34719f;
+}
+
+.modal_close_icon {
+    background-image: url(../image_PF/modal_1x/close_btn.svg);
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    margin-top: 104px;
+}
+
+.modal_close {
+    font-size: 12px;
+    text-align: center;
+}
 
 
 /* CONTACT PAGE */
-.contact_text1 {
-    font-size: 25px;
-    font-weight: bold;
+.contact_page.contact_header {
+    max-width: 1200px;
+}
+
+.contact_header {
+    background-image: url(../image_PF/bg_semicircle.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.header_logo {
+    margin-top: 74px;
+    margin-left: 62px;
     text-align: left;
 }
 
+.contact_title {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 225px;
+    margin-bottom: 88px;
+    color: #17439a;
+}
+
+.contact_wrap {
+    max-width: 1200px;
+}
+
+.contact_lead {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact_text1 {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
 .contact_text2 {
+    display: inline-block;
+
     font-size: 18px;
     padding-top: 35px;
     text-align: left;
+    margin-bottom: 130px;
+
 }
+
+.contact_form {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form_block {
+    margin-bottom: 88px;
+    position: relative;
+}
+
+.label {
+    font-weight: 300;
+    position: absolute;
+    left: 9%;
+    line-height: 45px;
+}
+
+.form_field {
+    border: none;
+    background-color: #d3cce5;
+    opacity: 0.5;
+    border-radius: 5px;
+    width: 75%;
+    height: 45px;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: 100%;
+}
+
+.inqury_field {
+    background-color: #d3cce5;
+    opacity: 0.5;
+    height: 240px;
+    padding: 10px 15px;
+}
+
+.contact_send {
+    text-align: center;
+}
+
+.contact_send_btn {
+    background-color: #34719f;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    border: none;
+    width: 150px;
+    padding: 20px 0;
+    margin-top: 73px;
+    cursor: pointer;
+}
+
+.contact_btn.reverse:hover {
+    background-color: #fff;
+    color: #34719f;
+}
+
+/* THANKS PAGE */
+.thanks_header #header {
+    max-width: 1200px;
+}
+
+.thanks_header {
+    background-image: url(../image_PF/bg_semicircle.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.header_logo {
+    margin-top: 74px;
+    margin-left: 62px;
+    text-align: left;
+}
+
+.thanks_title {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 225px;
+    margin-bottom: 88px;
+    color: #17439a;
+}
+
+.thanks_text {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 150px;
+}
+
+.b_arrow {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.back_home {
+    text-align: center;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+
+/* 
+①フッター箇所と下層ページやモーダルのトップに置いているグレーの半円は背景画像として置いているのですが、背景としておかない方が良いでしょうか？
+pictureタグの方がレスポンシブに対応しやすいでしょうか。
+
+②モーダルの内容を書いてみたのですが、
+半円の画像を置いたときどうしても上側に余白が開いてしまいます。（WORKSページ・contactページもです。）
+※モーダルはプラグインをどのように読み込ませたら良いでしょうか。
+
+③モーダル下側のPREVとNEXTの配置が左によってしまうのですが、センターに指定しても真ん中にきません。
+
+・スライダーが動かないのは、指定する箇所が間違っているからでしょうか。
+・各ボタン色が変わるように指定していますが変わらないのと
+ボタンがどうしても真ん中にきません...
+
+・アスペクト比の指定の仕方が
+
+・Googleのお問い合わせフォームの
+各項目のリンク付けをするのに数字？が探しきれませんでした。教えていただきたいです。
+
+
+
+ */
