@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css"
         integrity="sha512-UO+dUiFTr6cCaPZKCzXEGhYsuK8DkGAS5iThyMUrtHsg+INCFyRM3GiqJ4rjuvfEyn81XGjpfmjSwwR1dAjAsw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css"
+        integrity="sha512-jRxwiuoe3nt8lMSnOzNEuQ7ckDrLl31dwVYFWS6jklXQ6Nzl7b05rrWF9gjSxgOow5nFerdoN6CBB4gY5m5nDw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -18,9 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"
         integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css"
-        integrity="sha512-jRxwiuoe3nt8lMSnOzNEuQ7ckDrLl31dwVYFWS6jklXQ6Nzl7b05rrWF9gjSxgOow5nFerdoN6CBB4gY5m5nDw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         (function (d) {
             var config = {
@@ -56,9 +57,10 @@
                     <!-- ボックス01 -->
                     <a href="#modal01">
                         <div class="works_box">
-                            <span class="works_box_number">01</span>
-                            <span class="works_box_title">DESIGN CAFE
-                            </span>
+                            <div class="works_box_header"> <span class="works_box_number">01</span>
+                                <span class="works_box_title">DESIGN CAFE
+                                </span>
+                            </div>
                             <div class="works_box_img">
                                 <img src="image_PF/wk_cafe1.png" alt="コーディング">
                             </div>
@@ -153,8 +155,11 @@
                             <span class="works_box_category"></span>
                         </div>
                     </a>
-                    <!-- HOME TOPに戻る -->
-                    <div class="works_btn2">
+
+                </div>
+                <!-- HOME TOPに戻る -->
+                <div class="works_btn2">
+                    <div>
                         <a href="./index.html">
                             TOPに戻る</a>
                     </div>

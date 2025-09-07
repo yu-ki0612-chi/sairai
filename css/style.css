@@ -482,6 +482,9 @@ h1.header_title img {
 
 
 /* SKILL */
+html {
+    scroll-behavior: smooth;
+}
 
 .skill_wrap {
     background-image: url(../image_PF/sk_bg_img.svg);
@@ -493,6 +496,9 @@ h1.header_title img {
     margin: 120px 0 96px 0;
     flex-wrap: wrap;
     margin: 0 auto;
+    position: fixed;
+    top: 0;
+    transition: top .5s;
 
 }
 
@@ -949,7 +955,6 @@ h1.header_title img {
 }
 
 .works_box {
-    position: relative;
     flex: 1 1 250px;
     max-width: 300px;
     aspect-ratio: 1/1;
@@ -961,6 +966,12 @@ h1.header_title img {
 
 }
 
+.works_box_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 .works_box span {
     font-family: "vdl-admin", sans-serif;
     font-weight: 400;
@@ -968,47 +979,43 @@ h1.header_title img {
 }
 
 .works_box_number {
-    position: absolute;
-    left: 3%;
     margin-top: -35px;
     font-size: 40px;
     color: #17439a;
 }
 
 .works_box_title {
-    position: absolute;
-    top: 3%;
-    right: 3%;
     font-size: 18px;
     color: #999999;
 }
 
 .works_box_img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    text-align: center;
+}
+
+.works_box_img img {
     width: 70%;
     max-width: 220px;
     aspect-ratio: 1/1;
     object-fit: contain;
-    transform: translate(-50%, -50%);
     z-index: 10px;
     cursor: pointer;
 }
 
 .works_box_category {
-    position: absolute;
-    right: 3%;
-    bottom: 3%;
     font-size: 18px;
 }
 
-.works_box :hover::before {
+.works_box:hover {
     background-color: rgba(223, 194, 0, 0.45);
 
 }
 
 .works_btn2 {
+    text-align: center;
+}
+
+.works_btn2 div {
     display: inline-block;
     background-color: #34719f;
     color: #fff;
@@ -1017,8 +1024,7 @@ h1.header_title img {
     border-radius: 2px;
     width: 150px;
     padding: 20px 0;
-    margin-top: 220px;
-    margin-bottom: 270px;
+    margin: 220px auto 270px;
     cursor: pointer;
     font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 700;
@@ -1027,9 +1033,10 @@ h1.header_title img {
 }
 
 
-.works_btn2.reverse:hover {
+.works_btn2 div:hover {
     background: #fff;
     color: #34719f;
+    border: 1px solid #34719f;
 }
 
 .works_contact_container {
@@ -1099,6 +1106,10 @@ h1.header_title img {
     max-width: 1110px;
 }
 
+.remodal {
+    padding: 0;
+}
+
 .modal_content_header {
     background-image: url(../image_PF/bg_semicircle.svg);
     background-repeat: no-repeat;
@@ -1146,13 +1157,10 @@ h1.header_title img {
 
 .modal_text_container::before {
     content: "";
+    display: block;
     width: 100%;
     height: 1px;
     background-color: #34719f;
-    position: absolute;
-    top: 7%;
-    left: 20%;
-    transform: translateX(-45%);
 }
 
 .modal_works_text {
@@ -1282,10 +1290,10 @@ h1.header_title img {
 
 
 .modal_close_icon img {
-    background-image: url(../image_PF/modal_1x/close_btn.svg);
+    /* background-image: url(../image_PF/modal_1x/close_btn.svg);
     background-size: cover;
     background-position: center;
-    background-color: transparent;
+    background-color: transparent; */
     display: block;
     width: 60px;
     height: 60px;
@@ -1293,6 +1301,12 @@ h1.header_title img {
     border: none;
     margin: 0 auto;
 }
+
+.remodal-cancel,
+.remodal-cancel:hover {
+    background: transparent;
+}
+
 
 .modal_icon_c p {
 
@@ -1321,10 +1335,13 @@ h1.header_title img {
     height: 567px;
 }
 
-.header_logo {
-    position: absolute;
-    top: 11%;
-    left: 5%;
+.contact_page #header {
+    height: auto;
+}
+
+.contact_page .header_logo {
+    position: initial;
+
 }
 
 
@@ -1386,11 +1403,10 @@ h1.header_title img {
     font-style: normal;
 }
 
-.label {
+label {
     font-weight: 300;
-    position: absolute;
-    left: 9%;
-    line-height: 45px;
+    width: 20%;
+    display: block;
 }
 
 .form_field {
