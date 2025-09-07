@@ -10,22 +10,39 @@
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rpl4peo',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
 </head>
 
 
 <body class="contact_page">
     <header>
 
-        <header id="header" class="contact_header">
-            <div class="header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg" alt="ロゴ"></a></div>
-            <h2 class="contact_title">CONTACT</h2>
-            <div class="contact_lead">
+        <header id="header">
+            <div class="contact_header">
+                <div class="header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg" alt="ロゴ"></a>
+                    <div class="contact_wrap">
+                        <h2 class="contact_title">CONTACT</h2>
+                        <div class="contact_lead">
 
-                <p class="contact_text1">ちょっとした内容でも問題ございません。<br>
-                    お気軽にご相談ください。</p>
-                <p class="contact_text2">※お問い合わせ内容に関しては3営業日以内に返信<br>いたします。</p>
+                            <p class="contact_text1">ちょっとした内容でも問題ございません。<br>
+                                お気軽にご相談ください。</p>
+                        </div>
+                        <div class="contact_lead">
 
-            </div>
+                            <p class="contact_text2">※お問い合わせ内容に関しては3営業日以内に返信<br>いたします。</p>
+                        </div>
+                    </div>
+
+
         </header>
         <!-- コンタクト内容 -->
         <section id="contact" class="contact_page_wrap">

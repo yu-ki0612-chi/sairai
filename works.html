@@ -8,15 +8,39 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css"
+        integrity="sha512-UO+dUiFTr6cCaPZKCzXEGhYsuK8DkGAS5iThyMUrtHsg+INCFyRM3GiqJ4rjuvfEyn81XGjpfmjSwwR1dAjAsw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.js"
+        integrity="sha512-a/KwXZUMuN0N2aqT/nuvYp6mg1zKg8OfvovbIlh4ByLw+BJ4sDrJwQM/iSOd567gx+yS0pQixA4EnxBlHgrL6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css"
+        integrity="sha512-jRxwiuoe3nt8lMSnOzNEuQ7ckDrLl31dwVYFWS6jklXQ6Nzl7b05rrWF9gjSxgOow5nFerdoN6CBB4gY5m5nDw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'rpl4peo',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+
+</head>
 
 </head>
 
 <body class="works_page">
     <!-- ヘッダー -->
     <header>
-        <header id="header" class="works_header">
+        <header id="header" class="works_header1">
             <div class="header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg" alt="ロゴ"></a></div>
             <h2 class="works_title">WORKS</h2>
         </header>
@@ -24,152 +48,734 @@
 
 
         <!-- WORKS メインコンテンツ -->
-        <section id="works" class="works_wrap
+        <section id="works">
+            <div class="works_wrap
             ">
-
-            <div class="works_area">
-
-                <div class="works_unit" date-category="coding LP" data-skill="coding"><a href=""></a>
-                    <div class="works_box">
-                        <div class="works_number">01
-                            <span class="works_name">DESIGN CAFE
-
+                <!-- ボックスの全体を囲む -->
+                <div class="works_container">
+                    <!-- ボックス01 -->
+                    <a href="#modal01">
+                        <div class="works_box">
+                            <span class="works_box_number">01</span>
+                            <span class="works_box_title">DESIGN CAFE
                             </span>
-                            </p>
-                            <img src="image_PF/wk_cafe1.png" alt="DESIGN CAFE">
-                            <p class="works_lead">#Coding</p>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_cafe1.png" alt="コーディング">
+                            </div>
+                            <span class="works_box_category">#Coding</span>
+                        </div>
+                    </a>
+                    <!-- ボックス02 -->
+                    <a href="#modal02">
+                        <div class="works_box">
+                            <span class="works_box_number">02</span>
+                            <span class="works_box_title">LIFE hair design
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_life2.png" alt="LP">
+                            </div>
+                            <span class="works_box_category">#LP design</span>
+                        </div>
+                    </a>
+
+                    <!-- ボックス03-->
+                    <a href="#modal03">
+                        <div class="works_box">
+                            <span class="works_box_number">03</span>
+                            <span class="works_box_title">ICE CREAM
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_ice3.png" alt="バナー">
+                            </div>
+                            <span class="works_box_category">#Bunner design</span>
+                        </div>
+                    </a>
+
+                    <!-- ボックス04--> <a href="#modal04">
+                        <div class="works_box">
+                            <span class="works_box_number">04</span>
+                            <span class="works_box_title">SPRING SALE
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_spring4.png" alt="バナー">
+                            </div>
+                            <span class="works_box_category">#Bunner design</span>
+                        </div>
+                    </a>
+
+                    <!-- ボックス05-->
+                    <a href="#modal05">
+                        <div class="works_box">
+                            <span class="works_box_number">05</span>
+                            <span class="works_box_title">Burger POP/高級感
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_berger5.png" alt="バナー">
+                            </div>
+                            <span class="works_box_category">#Bunner design</span>
+                        </div>
+                    </a>
+                    <!-- ボックス06-->
+                    <a href="#modal06">
+                        <div class="works_box">
+                            <span class="works_box_number">06</span>
+                            <span class="works_box_title">Coworking space
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_workers6.png" alt="HP">
+                            </div>
+                            <span class="works_box_category">#Hp design</span>
+                        </div>
+                    </a>
+                    <!-- ボックス07-->
+                    <a href="#modal07">
+                        <div class="works_box">
+                            <span class="works_box_number">07</span>
+                            <span class="works_box_title">Sairai
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_sairai7.png" alt="HP">
+                            </div>
+                            <span class="works_box_category">#Design/Coding</span>
+                        </div>
+                    </a>
+
+
+                    <!-- ボックス08-->
+                    <a href="#modal08">
+                        <div class="works_box">
+                            <span class="works_box_number">08</span>
+                            <span class="works_box_title">Coming soon
+                            </span>
+                            <div class="works_box_img">
+                                <img src="image_PF/wk_coming8.png" alt="HP">
+                            </div>
+                            <span class="works_box_category"></span>
+                        </div>
+                    </a>
+                    <!-- HOME TOPに戻る -->
+                    <div class="works_btn2">
+                        <a href="./index.html">
+                            TOPに戻る</a>
+                    </div>
+                </div>
+                <!-- ワークスページからお問い合わせへとぶ -->
+
+                <div class="works_contact_container">
+                    <div class="works_contact_block">
+
+                        <div class="works_contact_heading">
+                            <h3>CONTACT</h3>
+                            <p class="works_contact_text1">ご相談・ご依頼お待ちしております。</p>
+                            <p class="works_contact_text2">お気軽にお問い合わせください</p>
+                        </div>
+                        <div class="contact_link"><a href="./contact.html">
+                                <p class="works_contact_btn">お問い合わせはこちらから</p>
                             </a>
+
                         </div>
                     </div>
 
-                    <div class="works_unit">
-                        <a href="">
-                            <div class="works_box">
-                                <p class="works_number">02
-                                    <span class="works_name">LIFE hair design
+                    <!-- モーダルウィンドウ全体を囲むコンテナ01 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal01">
 
-                                    </span>
-                                </p>
-                                <img src="image_PF/wk_life2.png" alt="LIFE hair design">
-                                <p class="works_lead">#LP design</p>
-                        </a>
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>CODING</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/pc_wk2.png" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>DESIGN CAFE(架空)</h5>
+
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 コーディング</li>
+                                        <li>制作期間 2~3週間</li>
+                                        <li>使用ツール VSCode/GitHub</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            レスポンシブ対応に加えて、JavaScript/jQuery<br>を用いた動きのあるサイトになっています。デザ<br>インカンプを元にコーディングを行なっておりま<br>す。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+                                    <img src="image_PF/modal_1x/アセット 3-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                    <img src="image_PF/modal_1x/アセット 4-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal07">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal02"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
 
-                <div class="works_unit">
-                    <a href="">
-                        <div class="works_box">
-                            <p class="works_number">03
-                                <span class="works_name">ICE CREAM
+                    <!-- モーダルウィンドウ全体を囲むコンテナ02 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal02">
 
-                                </span>
-                            </p>
-                            <img src="image_PF/wk_ice3.png" alt="ICE CREAM">
-                            <p class="works_lead">#Bunner design</p>
-                    </a>
-                </div>
-            </div>
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>LP DESIGN</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/pc_wk2.png" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>サロンHP[LIFE hair design](架空)</h5>
 
-            <div class="works_unit">
-                <a href="">
-                    <div class="works_box">
-                        <p class="works_number">04
-                            <span class="works_name">SPRING SALE
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン</li>
+                                        <li>制作期間 2週間</li>
+                                        <li>使用ツール IIIustrator/Photoshop</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            全体はコーポレートカラーであるピンクをアク<br>セントカラーに優しく柔らかい印象に仕上げ<br>ました。ファーストビューを1枚写真に切り取り<br>写真を重ねることで一瞬目をひくインパクトあ<br>るサイトを表現しました。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+                                    <img src="image_PF/modal_1x/アセット 45-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                    <img src="image_PF/modal_1x/アセット 46-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal01">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal03"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
 
-                            </span>
-                        </p>
-                        <img src="image_PF/wk_spring4.png" alt="SPRING SALE">
-                        <p class="works_lead">#Bunner design</p>
-                </a>
-            </div>
-            </div>
-            <div class="works_unit">
-                <a href="">
-                    <div class="works_box">
-                        <p class="works_number">05
-                            <span class="works_name">Burger POP/高級感
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
 
-                            </span>
-                        </p>
-                        <img src="image_PF/wk_berger5.png" alt="Burger  POP/高級感">
-                        <p class="works_lead">#Bunner design</p>
-                </a>
-            </div>
-            </div>
-            <div class="works_unit">
-                <a href="">
-                    <div class="works_box">
-                        <p class="works_number">06
-                            <span class="works_name">Coworking space
-
-                            </span>
-                        </p>
-                        <img src="image_PF/wk_workers6.png" alt="Coworking pace">
-                        <p class="works_lead">#Hp design</p>
-                </a>
-            </div>
-            </div>
-            <div class="works_unit">
-                <a href="">
-                    <div class="works_box">
-                        <p class="works_number">07
-                            <span class="works_name">Sairai
-
-                            </span>
-                        </p>
-                        <img src="image_PF/wk_sairai7.png" alt="Sairai">
-                        <p class="works_lead">#Design/Coding</p>
-                </a>
-            </div>
-            </div>
-            <div class="works_unit">
-                <a href="">
-                    <div class="works_box">
-                        <p class="works_number">08
-                            <span class="works_name">Coming soon
-
-                            </span>
-                        </p>
-                        <img src="image_PF/wk_coming8.png" alt="Coming soon">
-
-                </a>
-            </div>
-            </div>
-
-
-            <div class="contact_container">
-                <div class="contact_block">
-                    <div class="works_btn2">
-                        <a href="./works/index.html">
-                            TOPに戻る</a>
+                        </div>
                     </div>
-                    <div class="contact_heading">
-                        <h3>CONTACT</h3>
-                        <p class="contact_text1">ご相談・ご依頼お待ちしております。</p>
-                        <p class="contact_text2">お気軽にお問い合わせください</p>
+
+                    <!-- モーダルウィンドウ全体を囲むコンテナ03 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal03">
+
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>BUNNER</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/アセット 10-80.jpg" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>ICE CREAM(架空)</h5>
+
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン</li>
+                                        <li>制作期間 1週間</li>
+                                        <li>使用ツール IIIustrator/Photoshop</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            夏のワクワク感を演出し、若者からファミリー<br>まで幅広く『今だけ楽しめる特別なアイス』を<br>感じられるバナーを作成しました。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow">
+                                        <a href="#modal02"><img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal04"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="contact_link"><a href="./contact.html">
-                            <p class="contact_btn">お問い合わせはこちらから</p>
-                        </a>
 
+                    <!-- モーダルウィンドウ全体を囲むコンテナ04 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal04">
+
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>BUNNER</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/アセット 9-80.jpg" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>SPRING SALE(架空)</h5>
+
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン</li>
+                                        <li>制作期間 1週間</li>
+                                        <li>使用ツール IIIustrator/Photoshop</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            新生活を迎える学生と、スマホ代を節約したい<br>親世代に向けた訴求効果のあるバナーを作成し<br>ました。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal03">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal05"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
                     </div>
-                </div>
+                    <!-- モーダルウィンドウ全体を囲むコンテナ0５ -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal05">
 
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>BUNNER</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/アセット 11-80.jpg" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>HamBerger POP/高級感(架空)</h5>
 
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン</li>
+                                        <li>制作期間 1週間</li>
+                                        <li>使用ツール IIIustrator/Photoshop</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            『SNSで映える新しい体験を求める20代後半女性』<br>に向けて、
+                                            平日のちょっとした時間に楽しめる<br>”特別感のあるご褒美バーガー"を訴求する広告<br>を作成しました。
 
-                <!-- ナビゲーションメニュー固定 -->
-                <div class="l_header_right">
-                    <nav class="nav_scrolled">
-                        <ul>
-                            <li><a href="#header">HOME</a></li>
-                            <li><a href="#about">ABOUT</a></li>
-                            <li><a href="#works">WORKS</a></li>
-                            <li><a href="#contact
-                ">CONTACT</a></li>
-                            <li><img src="image_PF/instagram.svg" alt="instagram"></li>
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+                                    <img src="image_PF/modal_1x/アセット 12-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal04">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal06"> <img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- モーダルウィンドウ全体を囲むコンテナ06 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal06">
+
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>HP DESIGN</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <img src="image_PF/modal_1x/pc_wk.png" alt="モックアップ画像">
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>Coworking space(架空)</h5>
+
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン</li>
+                                        <li>制作期間 1週間</li>
+                                        <li>使用ツール IIIustrator</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            小数点を使わず整数で要素を配置することで、<br>デザインのズレを防ぎ、きれいに見えるレイア<br>ウトを意識して作成しました。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+                                    <img src="image_PF/modal_1x/アセット 5-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                    <img src="image_PF/modal_1x/アセット 6-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal05">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal07"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                                            <p>NEXT DESIGN</p>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- モーダルウィンドウ全体を囲むコンテナ07 -->
+                    <div id="js_modal" class="modal remodal" data-remodal-id="modal07">
+
+                        <!-- モーダルヘッダー -->
+                        <div class="modal_wrap">
+                            <div class="modal_content_header">
+                                <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                            alt="ロゴ"></a></div>
+                                <div class="modal_title">
+                                    <h3>HP DESIGN/CODING</h3>
+                                </div>
+                                <!-- モーダルイメージ画像 -->
+                                <div class="mockUp_image">
+                                    <!-- <img src="" alt="モックアップ画像"> -->
+                                </div>
+                            </div>
+                            <!-- モーダルテキスト -->
+                            <div class="modal_text_container">
+                                <h5>Sairai</h5>
+
+                                <div class="modal_works_text">
+                                    <ul class="modal_works_category">
+                                        <li>担当範囲 デザイン/コーディング</li>
+                                        <li>制作期間 2ヶ月</li>
+                                        <li>使用ツール IIIustrator/Vscode/GitHub</li>
+                                    </ul>
+                                    <div class="modal_works_detail">
+                                        <p class="modal_works_summary">
+                                            sairaiは”彩り”と"ライラック”を重ね合わせて<br>名づけました。彩り豊かな表現で、あなたの想<br>いをかたちにし、花が咲くように幸せへと繋げ<br>ていく。そんな想いを込めて制作しています。<br>また、娘を想って制作したサイトでもあります。
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- モーダルサムネイル画像 -->
+                                <div class="image_thumbnail">
+                                    <img src="image_PF/modal_1x/アセット 7-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                    <img src="image_PF/modal_1x/アセット 8-80.jpg" class="SP_img">
+                                </div>
+                                <!-- モーダル前ページ・次ページ -->
+                                <div class="modal_arrow">
+                                    <div class="back-arrow next-arrow"><a href="#modal06">
+                                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                                            <p>PREV DESIGN</p>
+                                        </a>
+                                    </div>
+                                    <div class="next-arrow ">
+                                        <a href="#modal01"><img src="image_PF/modal_1x/arrow_next.svg" alt="次へ"></a>
+                                        <p>NEXT DESIGN</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- モーダルからお問い合わせへ -->
+                            <div class="modal_contact_container">
+                                <div class="modal_contact_block">
+                                    <div class="modal_contact_heading">
+                                        <h3>CONTACT</h3>
+                                        <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                                        <p class="text2">お気軽にお問い合わせください</p>
+                                    </div>
+                                    <div class="modal_contact_btn"><a href="./contact.html">
+                                            お問い合わせはこちら
+                                        </a></div>
+                                </div>
+                            </div>
+                            <!-- モーダル閉じるボタン -->
+                            <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                                    date-remodal-action="cancel"></button>
+                                <p>Close</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- モーダルウィンドウ全体を囲むコンテナ08
+        <div id="js_modal" class="modal remodal" data-remodal-id="modal07">-->
+
+                    <!-- モーダルヘッダー -->
+                    <!-- <div class="modal_wrap">
+                <div class="modal_content_header">
+                    <div class="modal_header_logo"><a href="./index.html"><img src="image_PF/logo_lilac.svg"
+                                alt="ロゴ"></a></div>
+                    <div class="modal_title">
+                        <h3>HP DESIGN/CODING</h3>
+                    </div> -->
+                    <!-- モーダルイメージ画像 -->
+                    <!-- <img src="" alt="モックアップ画像"> 
+                    </div>
+                </div>-->
+                    <!-- モーダルテキスト -->
+                    <!-- <div class="modal_text_container">
+                    <h5>Sairai</h5>
+
+                    <div class="modal_works_text">
+                        <ul class="modal_works_category">
+                            <li>担当範囲 デザイン/コーディング</li>
+                            <li>制作期間 2ヶ月</li>
+                            <li>使用ツール IIIustrator/Vscode/GitHub</li>
                         </ul>
-                    </nav>
+                        <div class="modal_works_detail">
+                            <p class="modal_works_summary">
+                            </p>
+                        </div>
+                    </div> -->
+                    <!-- モーダルサムネイル画像 -->
+                    <!-- <div class="image_thumbnail">
+                        <img src="image_PF/modal_1x/アセット 7-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                        <img src="image_PF/modal_1x/アセット 8-80.jpg" class="SP_img">
+                    </div> -->
+                    <!-- モーダル前ページ・次ページ -->
+                    <!-- <div class="modal_arrow">
+                        <div class="back-arrow next-arrow">
+                            <img src="image_PF/modal_1x/arrow_prev.svg" alt="前へ">
+                            <p>PREV DESIGN</p>
+                        </div>
+                        <div class="next-arrow ">
+                            <img src="image_PF/modal_1x/arrow_next.svg" alt="次へ">
+                            <p>NEXT DESIGN</p>
+                        </div>
+                    </div>
+
+                </div> -->
+                    <!-- モーダルからお問い合わせへ -->
+                    <!-- <div class="modal_contact_container">
+                    <div class="modal_contact_block">
+                        <div class="modal_contact_heading">
+                            <h3>CONTACT</h3>
+                            <p class="text1">ご相談・ご依頼お待ちしております。</p>
+                            <p class="text2">お気軽にお問い合わせください</p>
+                        </div>
+                        <div class="modal_contact_btn"><a href="./contact.html">
+                                お問い合わせはこちら
+                            </a></div>
+                    </div>
+                </div> -->
+                    <!-- モーダル閉じるボタン -->
+                    <!-- <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
+                        date-remodal-action="cancel"></button>
+                    <p>Close</p>
+                </div>  -->
+
                 </div>
+            </div>
+
+
+
+
+
+
+            <!-- ナビゲーションメニュー固定 -->
+            <div class="l_header_right">
+                <nav class="nav_scrolled">
+                    <ul>
+                        <li><a href="#header">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#works">WORKS</a></li>
+                        <li><a href="#contact
+                ">CONTACT</a></li>
+                        <li><img src="image_PF/instagram.svg" alt="instagram"></li>
+                    </ul>
+                </nav>
+            </div>
 
         </section>
         <!-- Footer -->
@@ -183,7 +789,12 @@
 
         </footer>
 
+        <script>
+            //    JavaScript 
+            //   WORKS
 
+
+        </script>
 </body>
 
 </html>

@@ -1,9 +1,14 @@
 @charset "utf-8";
 
 .body {
-    background-blend-mode: #fffff9 url(./image_PF/all_bg.svg)center top;
-    -webkit-text-size-adjust: 100%;
-    -webkit-font-smoothing: antialiased;
+    /* 背景を２つ指定（下に色・上に画像） */
+    background-color: #fffff9;
+    background-image: url(./image_PF/all_bg.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    /* 合成モード */
+    background-blend-mode: multiply;
 }
 
 /* First View */
@@ -102,6 +107,10 @@ h1.header_title img {
     align-items: center;
     padding-top: 70px;
     position: relative;
+    font-family: "fot-tsukubrdgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    ;
 }
 
 .txt {
@@ -181,7 +190,9 @@ h1.header_title img {
     top: 43%;
     right: 20%;
     white-space: nowrap;
-    font-family: "貂明朝テキスト Regular", sans-serif;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .content_main p {
@@ -201,6 +212,9 @@ h1.header_title img {
     font-size: 25px;
     top: 83%;
     left: 16.9%;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -259,6 +273,10 @@ h1.header_title img {
     transform: translateX(-50%);
     transition: 0.3s;
     opacity: 0;
+    font-family: "fot-tsukubrdgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 /* ナビゲーションメニュー固定 */
@@ -294,6 +312,10 @@ h1.header_title img {
     display: block;
     align-items: center;
     margin: 56px 0;
+    font-family: "fot-tsukubrdgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 
 }
 
@@ -338,6 +360,9 @@ h1.header_title img {
     font-size: 25px;
     color: #17439a;
     margin-bottom: 150px;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .about_content1 {
@@ -348,6 +373,10 @@ h1.header_title img {
     padding-top: 46px;
     position: relative;
     z-index: 10;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 
@@ -378,12 +407,18 @@ h1.header_title img {
     color: #17439a;
     padding-bottom: 24px;
     z-index: 10;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .about_sub_heading {
     writing-mode: vertical-rl;
     font-size: 18px;
     color: #6ca1a2;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .about_content2 {
@@ -393,6 +428,9 @@ h1.header_title img {
     line-height: 2.5;
     z-index: 10;
     padding-right: 78px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .lilac2 {
@@ -415,6 +453,9 @@ h1.header_title img {
     margin-top: 248px;
     margin-left: 44px;
     z-index: 10;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .about_content3 {
@@ -425,6 +466,9 @@ h1.header_title img {
     line-height: 2.5;
     position: relative;
     z-index: 10;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .lilac3 {
@@ -461,12 +505,18 @@ h1.header_title img {
     text-align: center;
     color: #17439a;
     margin: 118px 0 16px 0;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .skill_sub_header {
     text-align: center;
     font-size: 25px;
     color: #6ca1a2;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .skill_container1 {
@@ -495,6 +545,9 @@ h1.header_title img {
 
 .desc_main_title1 {
     font-size: 20px;
+    font-family: "vdl-admin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .desc_text1 {
@@ -502,6 +555,9 @@ h1.header_title img {
     padding-top: 27px;
     padding-bottom: 27px;
     line-height: 1.8;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -532,6 +588,9 @@ h1.header_title img {
 
 .desc_main_title2 {
     font-size: 20px;
+    font-family: "vdl-admin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .desc_text2 {
@@ -539,6 +598,9 @@ h1.header_title img {
     padding-top: 27px;
     padding-bottom: 35px;
     line-height: 1.8;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -563,12 +625,18 @@ h1.header_title img {
 
 .desc_main_title3 {
     font-size: 20px;
+    font-family: "vdl-admin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .desc_text3 {
     font-size: 15px;
     padding-top: 30px;
     line-height: 1.8;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .skill_inner4 {
@@ -577,11 +645,17 @@ h1.header_title img {
 }
 
 /* WORKS Slider*/
-.works_wrap {
+#works {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
 
+}
+
+.works_slider_box span {
+    font-family: "vdl-admin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .works_header {
@@ -590,83 +664,82 @@ h1.header_title img {
     margin-top: 260px;
     margin-bottom: 150px;
     color: #17439a;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .works_slider_wrap {
+    overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 64px;
 }
 
-.works_block {
+.works_slider_box {
     position: relative;
-    width: 30%;
+    aspect-ratio: 1/1;
+    width: 300px;
+    border: none;
+    background: transparent;
     box-sizing: border-box;
-    transition: 0.3s ease all;
-    white-space: nowrap;
+    margin-right: 20px;
 }
 
-.works_block::before {
-    content: "";
+.works_slider_box_number {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    transition: background-color 0.3s ease;
-    z-index: 0;
-    border-radius: 8px;
-}
-
-
-
-.works_number {
+    left: 3%;
+    margin-top: -35px;
     font-size: 40px;
     color: #17439a;
-    margin-top: -22px;
-    z-index: 2;
 }
 
-.works_title {
+.works_slider_box_title {
+    position: absolute;
+    top: 3%;
+    right: 3%;
     font-size: 18px;
     color: #999999;
-    text-align: right;
-    z-index: 2;
 }
 
-.works_block img {
-    position: relative;
-    z-index: 2;
-    height: auto;
-    text-align: center;
-    margin-bottom: 32px;
-}
-
-.works_lead {
+.works_slider_box_img {
     position: absolute;
-    text-align: right;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    max-width: 220px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+
+}
+
+.works_slider_box_category {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
     font-size: 18px;
-    z-index: 2;
 }
 
 
-.works_block:hover::before {
+.works_slider_box:hover::before {
     background-color: rgba(223, 194, 0, 0.45);
-    z-index: 0;
-    position: relative;
+    z-index: 1;
 
 }
 
 .works_btn {
     margin-top: 178px;
     text-align: center;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .works_btn a {
     display: inline-block;
     background-color: #34719f;
-
     border-radius: 2px;
     width: 150px;
     padding: 20px 0;
@@ -713,7 +786,6 @@ h1.header_title img {
 
 .contact_link {
     margin-top: 75px;
-    margin-left: 30%;
 }
 
 .contact_btn {
@@ -724,8 +796,11 @@ h1.header_title img {
     border-radius: 2px;
     width: 150px;
     padding: 20px 0;
-    margin-top: 73px;
+    margin: 0 auto;
     cursor: pointer;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .contact_btn.reverse:hover {
@@ -748,17 +823,25 @@ h1.header_title img {
     margin-bottom: 24px;
     font-weight: normal;
     letter-spacing: .06em;
-
-
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .contact_heading p {
     opacity: 0.7;
     font-size: 16px;
+    margin-bottom: 73px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.follow_link img {
-    margin-top: 76px;
+.follow_link span {
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 /* Footer */
@@ -793,6 +876,12 @@ h1.header_title img {
     right: 0;
 }
 
+.copyright {
+    font-family: "vdl-admin, sans-serif";
+    font-weight: 400;
+    font-style: normal;
+}
+
 @keyframes fuwafuwa {
     0% {
         transform: translate(0, 0) rotate(-7deg);
@@ -821,87 +910,106 @@ h1.header_title img {
     max-width: 1200px;
 }
 
-.works_page .works_header {
+.works_page {
     background-image: url(../image_PF/bg_semicircle.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% 100%;
+    background-size: 100%;
     position: relative;
+    height: 567px;
 }
 
 .header_logo {
-    margin-top: 74px;
-    margin-left: 62px;
-    text-align: left;
+    position: absolute;
+    top: 11%;
+    left: 5%;
 }
 
 .works_page .works_title {
     font-size: 40px;
     text-align: center;
-    margin-top: 225px;
     margin-bottom: 88px;
     color: #17439a;
+    position: absolute;
+    top: 38.9%;
+    left: 42%;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.works_area {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px;
-}
-
-.works_unit {
+.works_container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-    box-sizing: border-box;
-
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
 }
 
 .works_box {
     position: relative;
-    max-width: 325px;
-    width: 325px;
-    height: 325px;
+    flex: 1 1 250px;
+    max-width: 300px;
     aspect-ratio: 1/1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    background-color: #d3cce5;
+    border: none;
+    background: transparent;
+    box-sizing: border-box;
+    border-radius: 8px;
+    z-index: 0;
+
 }
 
-.works_box p {
-    margin-bottom: -20px;
+.works_box span {
+    font-family: "vdl-admin", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.works_number {
+.works_box_number {
+    position: absolute;
+    left: 3%;
+    margin-top: -35px;
     font-size: 40px;
     color: #17439a;
 }
 
-.works_name {
+.works_box_title {
+    position: absolute;
+    top: 3%;
+    right: 3%;
     font-size: 18px;
     color: #999999;
-    text-align: right;
 }
 
-.works_unit img {
-    position: relative;
+.works_box_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    max-width: 220px;
     aspect-ratio: 1/1;
-    z-index: 1;
-    height: auto;
-    text-align: center;
-    margin-bottom: 32px;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    z-index: 10px;
+    cursor: pointer;
 }
 
-.works_unit :hover::before {
+.works_box_category {
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    font-size: 18px;
+}
+
+.works_box :hover::before {
     background-color: rgba(223, 194, 0, 0.45);
 
 }
 
 .works_btn2 {
-    display: block;
+    display: inline-block;
     background-color: #34719f;
     color: #fff;
     font-size: 15px;
@@ -911,29 +1019,79 @@ h1.header_title img {
     padding: 20px 0;
     margin-top: 220px;
     margin-bottom: 270px;
+    cursor: pointer;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
 }
+
 
 .works_btn2.reverse:hover {
     background: #fff;
     color: #34719f;
 }
 
-.contact_container {
+.works_contact_container {
     max-width: 1200px;
 }
 
+.works_contact_block {
+    text-align: center;
+
+}
+
+.works_contact_heading h3 {
+    font-size: 30px;
+    color: #17439a;
+    margin-bottom: 59px;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.works_contact_text1 {
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 20px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.works_contact_text2 {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 .works_contact_btn {
-    display: block;
-    background-color: #34719f;
+    display: inline-block;
+    background: #34719f;
     color: #fff;
     font-size: 15px;
     text-align: center;
     border-radius: 2px;
     width: 260px;
-    padding: 20 0ß;
+    padding: 20px 0;
     cursor: pointer;
-
+    margin: 0 auto;
+    margin-bottom: 217px;
+    text-decoration: none;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
+
+.works_contact_btn.reverse:hover {
+    background-color: #fff;
+    color: #34719f;
+}
+
 
 /* MODAL PAGE */
 .modal {
@@ -945,8 +1103,9 @@ h1.header_title img {
     background-image: url(../image_PF/bg_semicircle.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% 100%;
+    background-size: 100%;
     position: relative;
+    height: 520px;
 
 }
 
@@ -960,8 +1119,10 @@ h1.header_title img {
     font-size: 30px;
     color: #444;
     text-align: center;
-    margin-top: 236px;
     margin-bottom: 88px;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .mockUp_image {
@@ -977,6 +1138,10 @@ h1.header_title img {
 .modal_text_container h5 {
     padding: 42px 0 42px 42px;
     font-size: 18px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
 }
 
 .modal_text_container::before {
@@ -994,10 +1159,20 @@ h1.header_title img {
     display: flex;
     justify-content: center;
     margin-top: 43px;
+    text-align: left;
+
 }
 
 .modal_works_category {
     width: 44%;
+
+}
+
+.modal_works_category li {
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
 }
 
 .ul {
@@ -1005,7 +1180,13 @@ h1.header_title img {
 }
 
 .modal_works_category li:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 28px;
+}
+
+.modal_works_detail p {
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .image_thumbnail {
@@ -1026,10 +1207,10 @@ h1.header_title img {
     gap: 147px;
 }
 
-.modal_guidance p {
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
+.modal_arrow p {
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .modal_contact_container {
@@ -1045,6 +1226,9 @@ h1.header_title img {
     font-size: 30px;
     color: #17439a;
     margin-bottom: 59px;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -1052,11 +1236,18 @@ h1.header_title img {
     font-size: 25px;
     font-weight: 400;
     padding-bottom: 20px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .modal_contact_heading .text2 {
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 73px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .modal_contact_btn {
@@ -1067,8 +1258,12 @@ h1.header_title img {
     border-radius: 2px;
     width: 260px;
     padding: 20px 0;
-    margin-top: 73px;
     cursor: pointer;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0 auto;
+
 
 }
 
@@ -1077,59 +1272,79 @@ h1.header_title img {
     color: #34719f;
 }
 
-.modal_close_icon {
+.modal_icon_c {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 104px;
+}
+
+
+.modal_close_icon img {
     background-image: url(../image_PF/modal_1x/close_btn.svg);
     background-size: cover;
     background-position: center;
     background-color: transparent;
+    display: block;
     width: 60px;
     height: 60px;
     cursor: pointer;
     border: none;
-    margin-top: 104px;
+    margin: 0 auto;
 }
 
-.modal_close {
+.modal_icon_c p {
+
     font-size: 12px;
     text-align: center;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
+
 
 
 /* CONTACT PAGE */
+/* コンタクトヘッダー */
 .contact_page.contact_header {
     max-width: 1200px;
 }
 
-.contact_header {
+.contact_page {
     background-image: url(../image_PF/bg_semicircle.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% 100%;
+    background-size: 100%;
     position: relative;
+    height: 567px;
 }
 
 .header_logo {
-    margin-top: 74px;
-    margin-left: 62px;
-    text-align: left;
+    position: absolute;
+    top: 11%;
+    left: 5%;
 }
+
+
 
 .contact_title {
     font-size: 40px;
     text-align: center;
-    margin-top: 225px;
     margin-bottom: 88px;
     color: #17439a;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.contact_wrap {
-    max-width: 1200px;
-}
 
 .contact_lead {
+    margin: 0 auto;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    text-align: center;
 }
 
 .contact_text1 {
@@ -1138,18 +1353,24 @@ h1.header_title img {
     font-weight: bold;
     text-align: left;
     margin-bottom: 35px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .contact_text2 {
     display: inline-block;
-
     font-size: 18px;
     padding-top: 35px;
     text-align: left;
     margin-bottom: 130px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
+/* お問い合わせ入力フォーム */
 .contact_form {
     max-width: 700px;
     width: 100%;
@@ -1160,6 +1381,9 @@ h1.header_title img {
 .form_block {
     margin-bottom: 88px;
     position: relative;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .label {
@@ -1179,6 +1403,9 @@ h1.header_title img {
     box-sizing: border-box;
     padding: 0 15px;
     font-size: 100%;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .inqury_field {
@@ -1188,6 +1415,7 @@ h1.header_title img {
     padding: 10px 15px;
 }
 
+/* 送信ボタン */
 .contact_send {
     text-align: center;
 }
@@ -1202,6 +1430,9 @@ h1.header_title img {
     padding: 20px 0;
     margin-top: 73px;
     cursor: pointer;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .contact_btn.reverse:hover {
@@ -1214,35 +1445,43 @@ h1.header_title img {
     max-width: 1200px;
 }
 
-.thanks_header {
+.thanks_page {
     background-image: url(../image_PF/bg_semicircle.svg);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% 100%;
+    background-size: 100%;
     position: relative;
+    height: 567px;
 }
 
 .header_logo {
-    margin-top: 74px;
-    margin-left: 62px;
-    text-align: left;
+    position: absolute;
+    top: 11%;
+    left: 5%;
 }
 
 .thanks_title {
     font-size: 40px;
     text-align: center;
-    margin-top: 225px;
     margin-bottom: 88px;
     color: #17439a;
+    top: 39.8%;
+    font-family: "ten-mincho", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.thanks_text {
+
+.thanks_text p {
     font-size: 18px;
     font-weight: 400;
     display: flex;
     justify-content: center;
     text-align: left;
     margin-top: 150px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .b_arrow {
@@ -1254,28 +1493,7 @@ h1.header_title img {
     text-align: center;
     font-size: 12px;
     margin-top: 12px;
+    font-family: "fot-tsukuardgothic-std", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
-
-
-/* 
-①フッター箇所と下層ページやモーダルのトップに置いているグレーの半円は背景画像として置いているのですが、背景としておかない方が良いでしょうか？
-pictureタグの方がレスポンシブに対応しやすいでしょうか。
-
-②モーダルの内容を書いてみたのですが、
-半円の画像を置いたときどうしても上側に余白が開いてしまいます。（WORKSページ・contactページもです。）
-※モーダルはプラグインをどのように読み込ませたら良いでしょうか。
-
-③モーダル下側のPREVとNEXTの配置が左によってしまうのですが、センターに指定しても真ん中にきません。
-
-・スライダーが動かないのは、指定する箇所が間違っているからでしょうか。
-・各ボタン色が変わるように指定していますが変わらないのと
-ボタンがどうしても真ん中にきません...
-
-・アスペクト比の指定の仕方が
-
-・Googleのお問い合わせフォームの
-各項目のリンク付けをするのに数字？が探しきれませんでした。教えていただきたいです。
-
-
-
- */
