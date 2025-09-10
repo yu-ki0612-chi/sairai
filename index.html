@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sairai</title>
+    <link rel="icon" href="./image_PF/favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
@@ -474,7 +475,7 @@
                     </div>
                     <!-- モーダル閉じるボタン -->
                     <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
-                            date-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg" alt=""></button>
+                            data-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg" alt=""></button>
                         <p>Close</p>
                     </div>
 
@@ -550,7 +551,7 @@
                         </div>
                         <!-- モーダル閉じるボタン -->
                         <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
-                                date-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg"
+                                data-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg"
                                     alt=""></button>
                             <p>Close</p>
                         </div>
@@ -625,7 +626,7 @@
                             </div>
                             <!-- モーダル閉じるボタン -->
                             <div class="modal_icon_c"><button id="close_button" class="modal_close_icon remodal-cancel"
-                                    date-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg"
+                                    data-remodal-action="cancel"><img src="./image_PF/modal_1x/close_btn.svg"
                                         alt=""></button>
                                 <p>Close</p>
                             </div>
@@ -700,7 +701,7 @@
                                 </div>
                                 <!-- モーダル閉じるボタン -->
                                 <div class="modal_icon_c"><button id="close_button"
-                                        class="modal_close_icon remodal-cancel" date-remodal-action="cancel"><img
+                                        class="modal_close_icon remodal-cancel" data-remodal-action="cancel"><img
                                             src="./image_PF/modal_1x/close_btn.svg" alt=""></button>
                                     <p>Close</p>
                                 </div>
@@ -778,7 +779,7 @@
                                         <!-- モーダル閉じるボタン -->
                                         <div class="modal_icon_c"><button id="close_button"
                                                 class="modal_close_icon remodal-cancel"
-                                                date-remodal-action="cancel"><img
+                                                data-remodal-action="cancel"><img
                                                     src="./image_PF/modal_1x/close_btn.svg" alt=""></button>
                                             <p>Close</p>
                                         </div>
@@ -858,7 +859,7 @@
                                                 <!-- モーダル閉じるボタン -->
                                                 <div class="modal_icon_c"><button id="close_button"
                                                         class="modal_close_icon remodal-cancel"
-                                                        date-remodal-action="cancel"><img
+                                                        data-remodal-action="cancel"><img
                                                             src="./image_PF/modal_1x/close_btn.svg" alt=""></button>
                                                     <p>Close</p>
                                                 </div>
@@ -938,7 +939,7 @@
                                                         <!-- モーダル閉じるボタン -->
                                                         <div class="modal_icon_c"><button id="close_button"
                                                                 class="modal_close_icon remodal-cancel"
-                                                                date-remodal-action="cancel"><img
+                                                                data-remodal-action="cancel"><img
                                                                     src="./image_PF/modal_1x/close_btn.svg"
                                                                     alt=""></button>
                                                             <p>Close</p>
@@ -1019,7 +1020,7 @@
                                                             <!-- モーダル閉じるボタン -->
                                                             <div class="modal_icon_c"><button id="close_button"
                                                                     class="modal_close_icon remodal-cancel"
-                                                                    date-remodal-action="cancel"><img
+                                                                    data-remodal-action="cancel"><img
                                                                         src="./image_PF/modal_1x/close_btn.svg"
                                                                         alt=""></button>
                                                                 <p>Close</p>
@@ -1115,15 +1116,16 @@
         jQuery(window).bind('scroll', function () {
             scrolled = jQuery(window).scrollTop();
             weight1 = 0.5;
-            weight2 = 0.12;
-            jQuery('.lilac2').css('about_block1', 200 - scrolled * weight1 + 'px');
-            jQuery('.lilac3').css('about_block2', 100 - scrolled * weight1 + 'px');
+            weight2 = 0.2;
+            jQuery('.lilac2').css('top', 200 - scrolled * weight2 + 'px');
+            jQuery('.lilac3').css('top', 900 - scrolled * weight2 + 'px');
         });
         // 被さる画像背景
         (function () {
-            const fh = document.getElementById('skill_wrap');
+            const fh = document.querySelector('.skill_wrap');
+            const fhTop = fh.getBoundingClientRect().top
             window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 100) {
+                if (window.pageYOffset + window.innerHeight > fhTop - 300) {
                     fh.classList.add('is-show');
                 } else {
                     fh.classList.remove('is-show');

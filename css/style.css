@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+html,
+body {
+    overflow-y: scroll;
+}
+
 .body {
     /* 背景を２つ指定（下に色・上に画像） */
     background-color: #f8f9f3;
@@ -168,7 +173,7 @@ h1.header_title img {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 165px;
-    padding-top: 400px;
+    padding-top: 300px;
 }
 
 .concept_img {
@@ -176,13 +181,13 @@ h1.header_title img {
     flex-direction: row-reverse;
     justify-content: center;
     position: relative;
-    width: 50%;
+    width: 100%;
     z-index: 1;
 }
 
 .leaf_r {
     left: 50%;
-    position: fixed;
+    position: absolute;
     top: 300px;
 
 
@@ -190,8 +195,8 @@ h1.header_title img {
 
 .leaf_l {
     padding-top: 400px;
-    position: fixed;
-    top: 100px;
+    position: absolute;
+    left: 0;
 
 }
 
@@ -201,8 +206,9 @@ h1.header_title img {
     writing-mode: vertical-rl;
     letter-spacing: 0.1em;
     font-size: 40px;
-    top: 43%;
+    top: -100px;
     white-space: nowrap;
+    margin-left: 94px;
 
 
 }
@@ -226,8 +232,7 @@ h1.header_title img {
     white-space: nowrap;
     letter-spacing: 0.1em;
     font-size: 25px;
-    top: 83%;
-    left: 16.9%;
+    top: 180px;
     z-index: 2;
 
 }
@@ -454,7 +459,7 @@ h1.header_title img {
 
 .lilac2 {
     position: absolute;
-    top: 21%;
+    top: 200px;
     right: 0%;
     z-index: 1;
 }
@@ -492,7 +497,7 @@ h1.header_title img {
 
 .lilac3 {
     position: absolute;
-    top: 78%;
+    top: 900px;
     left: 11%;
     z-index: 1;
 
@@ -514,7 +519,9 @@ html {
     margin: 120px 0 96px 0;
     flex-wrap: wrap;
     margin: 0 auto;
-
+    position: relative;
+    top: 300px;
+    transition: 1s;
 }
 
 .skill_wrap.is-show {
@@ -763,7 +770,7 @@ html {
 
 
 .works_slider_box:hover {
-    background-color: rgba(223, 194, 0, 0.45);
+    background-color: rgba(223, 194, 0, 0.85);
 
 }
 
@@ -846,10 +853,11 @@ html {
     font-family: "fot-tsukuardgothic-std", sans-serif;
     font-weight: 700;
     font-style: normal;
+    display: inline-block;
 
 }
 
-.contact_btn:hover {
+.contact_btn div:hover {
     background-color: #fff;
     color: #34719f;
     border: 1px solid #34719f;
@@ -1006,6 +1014,7 @@ html {
     box-sizing: border-box;
     border-radius: 8px;
     z-index: 0;
+    position: relative;
 
 }
 
@@ -1042,6 +1051,7 @@ html {
     aspect-ratio: 1/1;
     object-fit: contain;
     cursor: pointer;
+    z-index: 1;
 }
 
 .works_box_category {
@@ -1050,7 +1060,7 @@ html {
 }
 
 .works_box:hover {
-    background-color: rgba(223, 194, 0, 0.45);
+    background-color: rgba(223, 194, 0, 0.85);
 
 }
 
@@ -1581,19 +1591,14 @@ label {
 }
 
 /* レスポンシブ */
+@media screen and (max-width:767px) {}
 
 
-/* 1.index.htmlのcontactボタンが
-カーソルを合わせた時にhoverで色が変わるのではなく横に広がってしまいます。
-原因は分かったのですが、直し方がわからないので教えていただきたいです。 
+/* 
+・面談で教えていただいた、花の動きの調整をしたのですが、花がコンセプト側に上がり過ぎてしまい調整がうまくいかなかったので一旦みていただきたいです。 
 
-2.Rebodal 箇所の閉じるボタンがクリックしても反応しなくなってしましました。
+・画面を横にスライドさせないよう、overflow-x:hidden;か
+overflow-y:scroll;を指定みたのですが、左側の切り替わりのセクションがコンセプトを過ぎたあたりから非表示になってしまいます。どのように指定したら良いでしょうか。
 
-3.
-ファビコンの設定はリンクを使って行うのでしょうか？それとも１つ部屋を用意するのでしょうか？
-
-4.わたしにできることの背景が被さるようにするために教えていただいた参考サイトで色々指定を試してみたのですが、よくわかりませんでした。
-教えていただきたいです。
-
-5.コンセプトの葉の部分を動かすようにしたみたのですが、他のバランスが崩れてしまい、直せなくなってしまいました。
+画像の書き出しありがとうございました！お礼を言い忘れておりました><；
 */
