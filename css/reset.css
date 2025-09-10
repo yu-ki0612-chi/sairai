@@ -44,9 +44,9 @@ img {
     border: none;
 }
 
-/* a:hover {
+a:hover {
     opacity: 0.5;
-} */
+}
 
 html {
     scroll-behavior: smooth;
