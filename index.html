@@ -495,7 +495,7 @@
                         </div>
                         <!-- モーダルイメージ画像 -->
                         <div class="mockUp_image">
-                            <img src="image_PF/modal_1x/pc_wk2.png" alt="モックアップ画像" width="70%">
+                            <img src="image_PF/アセット 13.png" alt="モックアップ画像" width="70%">
                         </div>
                     </div>
                     <!-- モーダルテキスト -->
@@ -880,7 +880,7 @@
                                                     </div>
                                                     <!-- モーダルイメージ画像 -->
                                                     <div class="mockUp_image">
-                                                        <!-- <img src="" alt="モックアップ画像" width="70%"> -->
+                                                        <img src="image_PF/アセット 14.png" alt="モックアップ画像" width="70%">
                                                     </div>
                                                 </div>
                                                 <!-- モーダルテキスト -->
@@ -1113,12 +1113,15 @@
             jQuery('.leaf_r').css('top', 300 - scrolled * weight1 + 'px');
             jQuery('.leaf_l').css('top', 100 - scrolled * weight1 + 'px');
         });
+        // 花の動き
         jQuery(window).bind('scroll', function () {
             scrolled = jQuery(window).scrollTop();
             weight1 = 0.5;
             weight2 = 0.2;
-            jQuery('.lilac2').css('top', 200 - scrolled * weight2 + 'px');
-            jQuery('.lilac3').css('top', 900 - scrolled * weight2 + 'px');
+            if (scrolled + $(window).outerHeight() > $('#about').offset().top) {
+                jQuery('.lilac2').css('top', 200 - (scrolled - $('#about').offset().top) * weight2 + 'px');
+                jQuery('.lilac3').css('top', 900 - (scrolled - $('#about').offset().top) * weight2 + 'px');
+            }
         });
         // 被さる画像背景
         (function () {

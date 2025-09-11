@@ -2,7 +2,7 @@
 
 html,
 body {
-    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .body {
@@ -64,11 +64,6 @@ body {
     right: 5%;
     top: 4%;
     animation-delay: 4.1s;
-}
-
-.img-sairai {
-    animation-name: sairaiimage;
-    transition: .6s;
 }
 
 h1.header_title img {
@@ -530,6 +525,8 @@ html {
 
 .skill_container {
     max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     padding-bottom: 60px;
 }
 
@@ -806,24 +803,25 @@ html {
     background: #fff;
     color: #34719f;
     border: 1px solid #34719f;
+
 }
 
 .bg-imgdot2 {
     text-align: center;
     margin-top: 10px;
+    padding-bottom: 60px;
 }
 
 /* CONTACT */
-.contact_wrap {
-    padding-top: 85px;
-    max-width: 1200px;
-    width: 100%;
-}
 
 .contact_container {
     display: flex;
     text-align: center;
-    margin-bottom: 263px;
+    padding-top: 90px;
+    padding-bottom: 263px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .contact_block {
@@ -961,6 +959,11 @@ html {
 }
 
 /* WORKS PAGE */
+html,
+body .works_page {
+    overflow-x: visible;
+}
+
 .works_header #header {
     max-width: 1200px;
 }
@@ -1391,6 +1394,11 @@ html {
 
 
 /* CONTACT PAGE */
+html,
+body .contact_page {
+    overflow-x: visible;
+}
+
 /* コンタクトヘッダー */
 .contact_page.contact_header {
     max-width: 1200px;
@@ -1528,6 +1536,11 @@ label {
 }
 
 /* THANKS PAGE */
+html,
+body .thanks_page {
+    overflow-x: visible;
+}
+
 .thanks_header #header {
     max-width: 1200px;
 }
@@ -1591,14 +1604,71 @@ label {
 }
 
 /* レスポンシブ */
-@media screen and (max-width:767px) {}
+@media screen and (max-width:767px) {
 
+    .header_inner img {
+        max-width: 100%;
+        height: auto;
 
-/* 
-・面談で教えていただいた、花の動きの調整をしたのですが、花がコンセプト側に上がり過ぎてしまい調整がうまくいかなかったので一旦みていただきたいです。 
+    }
 
-・画面を横にスライドさせないよう、overflow-x:hidden;か
-overflow-y:scroll;を指定みたのですが、左側の切り替わりのセクションがコンセプトを過ぎたあたりから非表示になってしまいます。どのように指定したら良いでしょうか。
+    /* 花びらの位置 */
+    .petal1 {
+        left: -1.1%;
+        top: 27.5%;
+        animation-delay: 0.3s;
+    }
 
-画像の書き出しありがとうございました！お礼を言い忘れておりました><；
-*/
+    .petal2 {
+        left: 17%;
+        top: 49%;
+        animation-delay: 2.0s;
+    }
+
+    .petal3 {
+        right: 28.9%;
+        top: 41.8%;
+        animation-delay: 2.7s;
+    }
+
+    .petal4 {
+        left: 17.6%;
+        bottom: 1.5%;
+        animation-delay: 3.4s;
+    }
+
+    .petal5 {
+        right: 12.5%;
+        top: 31.8%;
+        animation-delay: 4.1s;
+    }
+
+    h1.header_title img {
+        position: absolute;
+        left: 50%;
+        top: 8%;
+        width: 50%;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        animation: fadeUp 1.5s ease forwards;
+        animation-delay: 4s;
+    }
+
+}
+
+/* お世話になっております。
+配置を中央に来るように修正しました。
+うまく配置できているでしょうか。
+
+また、レスポンシブも出来る限り頑張りたいのですが、
+早速花の配置でつまづいています。
+PC版ではposition: relative;やabsoluteを
+使って指定していますが、SP版だと画像の大きさが大き過ぎたり位置の調整がなかなかうまくいきません。
+max-widthの活用やheight:autoを使う、もしくはview Boxを使うなど調べたら出て来たのですが、どのようにしてサイズ感や配置を調整したら良いでしょうか。
+
+よろしくお願いいたします。
+PC版もおかしな点があったら教えていただきたいです。*/
