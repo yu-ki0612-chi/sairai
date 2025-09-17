@@ -95,7 +95,10 @@
                 <img src="image_PF/CONCEPT_art.svg" alt="和柄模様" class="bg-img pattern">
             </div>
             <div class="bg-imgdot">
-                <img src="image_PF/dot_border.png" alt="ドット線">
+                <picture>
+                    <source srcset="./image_PF/2x/dot_border@2x.png" media="(max-width:767px;)">
+                    <img src="image_PF/dot_border.png" alt="ドット線">
+                </picture>
             </div>
 
 
@@ -116,30 +119,47 @@
 
         </section>
 
-        <!-- About -->
+        <!-- ABOUT -->
         <section id="about" class="about_wrap">
 
             <div class="about_container1">
-                <img src="image_PF/AB_img.png" alt="水彩画" class="illust photoMe">
-
                 <h4 class="about_heading1">わたしのこと</h4>
 
-                <p class="about_content1">
-                    はじめまして。さいらいデザインと申します。<br>
-                    わたしは、アニメや映画が好きで、作りこまれた<br>
-                    世界観に没入してしまうほど。<br>
-                    五感が刺激されるような作品と出会えた時、<br>
-                    自分が知らなかった感情が呼び覚まされ、<br>
-                    同時に心が満たされていきます。<br>
-                    アニメや映画と同じように<br>
-                    目で見て楽しむもの<br>
-                    音が聞こえてきそうなもの<br>
-                    香りや味を感じてみたくなるもの<br>
-                    思わず触れてみたいと思えるようなもの<br>
-                    様々な想いを汲み取りかたちにできるよう<br>
-                    日々デザインと向き合っています。</p>
+                <div class="about_content1">
+                    <p class="block block1">
+                        はじめまして。さいらいデザインと申します。<br>
+                        わたしは、アニメや映画が好きで、作りこまれた<br>
+                        世界観に没入してしまうほど。<br></p>
+                    <p class="block block2">
+                        五感が刺激されるような作品と出会えた時、<br>
+                        自分が知らなかった感情が呼び覚まされ、<br>
+                        同時に心が満たされていきます。<br></p>
+                    <p class="block block3">
+                        アニメや映画と同じように<br>
+                        目で見て楽しむもの<br>
+                        音が聞こえてきそうなもの<br>
+                        香りや味を感じてみたくなるもの<br>
+                        思わず触れてみたいと思えるようなもの<br></p>
+                    <p class="block block4">
+                        様々な想いを汲み取りかたちにできるよう<br>
+                        日々デザインと向き合っています。</p>
+                </div>
+                <picture>
+                    <source srcset="./image_PF/2x/AB_img@2x.png" media="(max-width:767px)">
+                    <img src="image_PF/AB_img.png" alt="水彩画" class="illust photoMe">
+                </picture>
+                <!-- ★ 葉っぱ用のコンテナを追加 -->
+                <div class="falling-leaves">
+                    <!-- <img src="image_PF/SP/leaf_2.svg" class="fall_leaf">
+    <img src="image_PF/SP/leaf_1.svg" class="leaf">
+    <img src="image_PF/SP/leaf_2.svg" class="leaf">
+    <img src="image_PF/SP/leaf_1.svg" class="leaf">
+    <img src="image_PF/SP/leaf_2.svg" class="leaf">
+    <img src="image_PF/SP/leaf_1.svg" class="leaf"> -->
+                </div>
 
             </div>
+
             </div>
             <div class="about_container2">
                 <div class="about_block1">
@@ -220,8 +240,12 @@
 
                 <div class="skill_container2">
                     <div class="skill_inner3">
-                        <img src="image_PF/skill_etc_leaf..svg" alt="葉その他背景" class="etc_leaf">
+                        <picture>
+                            <source srcset="image_PF/SP/skill_etc_leaf._sp.svg" media="(max-width:767px)">
+                            <img src="image_PF/skill_etc_leaf..svg" alt="葉その他背景" class="etc_leaf">
+                        </picture>
                         <div class="skill_ds_text3">
+
                             <p class="desc_main_title3">Et cetera.</p>
                             <p class="desc_text3
                         ">その他、Figmaやcanvaを学習中で、<br>開発環境はVScode/GitHubを使用可能<br>です。連絡ツールはChatwork使用可能<br>です。
@@ -441,8 +465,14 @@
                     </div>
                     <!-- モーダルサムネイル画像 -->
                     <div class="image_thumbnail">
-                        <img src="image_PF/modal_1x/アセット 3-80.jpg" alt="PCサムネイル画像" class="PC_img">
-                        <img src="image_PF/modal_1x/アセット 4-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                        <picture>
+                            <source srcset="image_PF/modal_2x/sp_hp_cafe@2x-80.jpg" media="(max-width:767px)">
+                            <img src="image_PF/modal_1x/hp_cafe.jpg" alt="PCサムネイル画像" class="PC_img">
+                        </picture>
+                        <picture>
+                            <source srcset="image_PF/modal_2x/sp_hp_cafe2@2x-80.jpg" media="(max-width:767px)">
+                            <img src="image_PF/modal_1x/hp2_cafe.jpg" alt="SPサムネイル画像" class="SP_img">
+                        </picture>
                     </div>
                     <!-- モーダル前ページ・次ページ -->
                     <div class="modal_arrow">
@@ -516,8 +546,14 @@
                         </div>
                         <!-- モーダルサムネイル画像 -->
                         <div class="image_thumbnail">
-                            <img src="image_PF/modal_1x/アセット 45-80.jpg" alt="PCサムネイル画像" class="PC_img">
-                            <img src="image_PF/modal_1x/アセット 46-80.jpg" alt="SPサムネイル画像" class="SP_img">
+                            <picture>
+                                <source srcset="image_PF/modal_2x/sp_hp_life@2x-80.jpg" media="(max-width:767px)">
+                                <img src="image_PF/modal_1x/hp_life.jpg" alt="PCサムネイル画像" class="PC_img">
+                            </picture>
+                            <picture>
+                                <source srcset="image_PF/modal_2x/sp_hp_life2@2x-80.jpg" media="(max-width:767px)">
+                                <img src="image_PF/modal_1x/hp2_life.jpg" alt="SPサムネイル画像" class="SP_img">
+                            </picture>
                         </div>
                         <!-- モーダル前ページ・次ページ -->
                         <div class="modal_arrow">
@@ -572,7 +608,11 @@
                             </div>
                             <!-- モーダルイメージ画像 -->
                             <div class="mockUp_image">
-                                <img src="image_PF/modal_1x/アセット 10-80.jpg" alt="モックアップ画像">
+                                <picture>
+                                    <source srcset="image_PF/modal_2x/sp_ice@2x-80.jpg" media="(max-width:767px)">
+
+                                    <img src="image_PF/modal_1x/ice.jpg" alt="モックアップ画像">
+                                </picture>
                             </div>
                         </div>
                         <!-- モーダルテキスト -->
@@ -647,7 +687,11 @@
                                 </div>
                                 <!-- モーダルイメージ画像 -->
                                 <div class="mockUp_image">
-                                    <img src="image_PF/modal_1x/アセット 9-80.jpg" alt="モックアップ画像">
+                                    <picture>
+                                        <source srcset="image_PF/modal_2x/sp_spring_sale@2x-80.jpg"
+                                            media="(max-width:767px)">
+                                        <img src="image_PF/modal_1x/spring_sale.jpg" alt="モックアップ画像" class="mockup">
+                                    </picture>
                                 </div>
                             </div>
                             <!-- モーダルテキスト -->
@@ -721,7 +765,11 @@
                                     </div>
                                     <!-- モーダルイメージ画像 -->
                                     <div class="mockUp_image">
-                                        <img src="image_PF/modal_1x/アセット 11-80.jpg" alt="モックアップ画像">
+                                        <picture>
+                                            <source srcset="image_PF/modal_2x/sp_burger@2x-80.jpg"
+                                                media="(max-width:767px)">
+                                            <img src="image_PF/modal_1x/burger.jpg" alt="モックアップ画像" class="mockup">
+                                        </picture>
                                     </div>
                                 </div>
                                 <!-- モーダルテキスト -->
@@ -746,7 +794,11 @@
                                     </div>
                                     <!-- モーダルサムネイル画像 -->
                                     <div class="image_thumbnail">
-                                        <img src="image_PF/modal_1x/アセット 12-80.jpg" alt="PCサムネイル画像" class="PC_img">
+                                        <picture>
+                                            <source srcset="image_PF/modal_2x/sp_burger2@2x-80.jpg"
+                                                media="(max-width:767px)">
+                                            <img src="image_PF/modal_1x/burger2.jpg" alt="PCサムネイル画像" class="PC_img">
+                                        </picture>
                                     </div>
                                     <!-- モーダル前ページ・次ページ -->
                                     <div class="modal_arrow">
@@ -821,10 +873,18 @@
                                             </div>
                                             <!-- モーダルサムネイル画像 -->
                                             <div class="image_thumbnail">
-                                                <img src="image_PF/modal_1x/アセット 5-80.jpg" alt="PCサムネイル画像"
-                                                    class="PC_img">
-                                                <img src="image_PF/modal_1x/アセット 6-80.jpg" alt="SPサムネイル画像"
-                                                    class="SP_img">
+                                                <picture>
+                                                    <source srcset="image_PF/modal_2x/sp_hp_coworking@2x-80.jpg"
+                                                        media="(max-width:767px)">
+                                                    <img src="image_PF/modal_1x/hp_coworking.jpg" alt="PCサムネイル画像"
+                                                        class="PC_img">
+                                                </picture>
+                                                <picture>
+                                                    <source srcset="image_PF/modal_2x/sp_hp_coworking2@2x-80.jpg"
+                                                        media="(max-width:767px)">
+                                                    <img src="image_PF/modal_1x/hp2_coworking.jpg" alt="SPサムネイル画像"
+                                                        class="SP_img">
+                                                </picture>
                                             </div>
                                             <!-- モーダル前ページ・次ページ -->
                                             <div class="modal_arrow">
@@ -903,9 +963,18 @@
                                                     </div>
                                                     <!-- モーダルサムネイル画像 -->
                                                     <div class="image_thumbnail">
-                                                        <img src="image_PF/modal_1x/アセット 7-80.jpg" alt="PCサムネイル画像"
-                                                            class="PC_img">
-                                                        <img src="image_PF/modal_1x/アセット 8-80.jpg" class="SP_img">
+                                                        <picture>
+                                                            <source srcset="image_PF/modal_2x/sp_hp_sairai@2x-80.jpg"
+                                                                media="(max-width:767px)">
+                                                            <img src="image_PF/modal_1x/hp_sairai.jpg" alt="PCサムネイル画像"
+                                                                class="PC_img">
+                                                        </picture>
+                                                        <picture>
+                                                            <source srcset="image_PF/modal_2x/sp_hp_sairai2@2x-80.jpg"
+                                                                media="(max-width:767px)">
+                                                            <img src="image_PF/modal_2x/sp_hp_sairai2@2x-80.jpg"
+                                                                class="SP_img">
+                                                        </picture>
                                                     </div>
                                                     <!-- モーダル前ページ・次ページ -->
                                                     <div class="modal_arrow">
@@ -949,7 +1018,7 @@
                                                 </div>
 
                                                 <!-- モーダルウィンドウ全体を囲むコンテナ08 -->
-                                                <div id="js_modal" class="modal remodal" data-remodal-id="modal07">
+                                                <div id="js_modal" class="modal remodal" data-remodal-id="modal08">
 
                                                     <!-- モーダルヘッダー -->
                                                     <div class="modal_wrap">
@@ -983,10 +1052,8 @@
                                                             </div>
                                                             <!-- モーダルサムネイル画像 -->
                                                             <div class="image_thumbnail">
-                                                                <img src="image_PF/modal_1x/アセット 7-80.jpg"
-                                                                    alt="PCサムネイル画像" class="PC_img">
-                                                                <img src="image_PF/modal_1x/アセット 8-80.jpg"
-                                                                    class="SP_img">
+                                                                <img src="" alt="PCサムネイル画像" class="PC_img">
+                                                                <img src="" class="SP_img">
                                                             </div>
                                                             <!-- モーダル前ページ・次ページ -->
                                                             <div class="modal_arrow">
@@ -1061,6 +1128,8 @@
                 slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 2000,
+                centerMode: true,
+                centerPadding: '20px',
                 infinite: true,
                 arrows: false,
                 dots: true,
@@ -1070,6 +1139,7 @@
                         settings: {
                             slidesToShow: 1,
                             slidersToScroll: 1,
+                            centerMode: true,
                             infinite: true,
                         }
                     }]
@@ -1109,20 +1179,78 @@
         jQuery(window).bind('scroll', function () {
             scrolled = jQuery(window).scrollTop();
             weight1 = 0.5;
-            weight2 = 0.12;
+            weight2 = 0.3;
             jQuery('.leaf_r').css('top', 300 - scrolled * weight1 + 'px');
             jQuery('.leaf_l').css('top', 100 - scrolled * weight1 + 'px');
         });
+        //  ABOUT_葉っぱの動き
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth <= 767) {
+                const leafContainer = document.querySelector('.falling-leaves');
+                const leafImages = ["image_PF/SP/leaf_1.svg", "image_PF/SP/leaf_2.svg"];
+
+                const sectionHeight = leafContainer.offsetHeight;
+                const leafCount = 10; // 葉っぱの数
+
+                for (let i = 0; i < leafCount; i++) {
+                    const leaf = document.createElement("img");
+                    leaf.src = leafImages[Math.floor(Math.random() * leafImages.length)];
+                    leaf.classList.add("leaf");
+
+                    // ランダム位置 & サイズ
+                    leaf.style.left = Math.random() * 100 + "%";
+                    leaf.style.width = 25 + Math.random() * 30 + "px"; // 25〜55px
+
+                    // アニメーション設定（落下はゆっくり10〜20秒）
+                    const duration = 10 + Math.random() * 10;
+                    const delay = Math.random() * 10;
+                    leaf.style.setProperty("--fall-distance", sectionHeight + "px");
+
+                    // 2つのアニメーションを同時に
+                    leaf.style.animation = `
+        fall ${duration}s linear ${delay}s infinite,
+        sway ${5 + Math.random() * 5}s ease-in-out ${delay}s infinite
+      `;
+
+                    leafContainer.appendChild(leaf);
+                }
+            }
+        });
+
+
+
         // 花の動き
         jQuery(window).bind('scroll', function () {
             scrolled = jQuery(window).scrollTop();
             weight1 = 0.5;
             weight2 = 0.2;
-            if (scrolled + $(window).outerHeight() > $('#about').offset().top) {
-                jQuery('.lilac2').css('top', 200 - (scrolled - $('#about').offset().top) * weight2 + 'px');
-                jQuery('.lilac3').css('top', 900 - (scrolled - $('#about').offset().top) * weight2 + 'px');
+
+            // ★ 基準値を変数化
+            var baseLilac2 = 200;
+            var baseLilac3 = 900;
+
+            // ★ 画面幅がスマホサイズのときにだけ値を上書き
+            if (jQuery(window).width() <= 767) {
+                baseLilac2 = 3600;  // スマホではさらに下げる
+                baseLilac3 = 4500;
+            }
+
+            if (scrolled + jQuery(window).outerHeight() > jQuery('#about').offset().top) {
+                jQuery('.lilac2').css('top', baseLilac2 - (scrolled - jQuery('#about').offset().top) * weight2 + 'px');
+                jQuery('.lilac3').css('top', baseLilac3 - (scrolled - jQuery('#about').offset().top) * weight2 + 'px');
             }
         });
+
+        // jQuery(window).bind('scroll', function () {
+        //     scrolled = jQuery(window).scrollTop();
+        //     weight1 = 0.5;
+        //     weight2 = 0.2;
+        //     if (scrolled + $(window).outerHeight() > $('#about').offset().top) {
+        //         jQuery('.lilac2').css('top', 200 - (scrolled - $('#about').offset().top) * weight2 + 'px');
+        //         jQuery('.lilac3').css('top', 900 - (scrolled - $('#about').offset().top) * weight2 + 'px');
+        //     }
+        // });
         // 被さる画像背景
         (function () {
             const fh = document.querySelector('.skill_wrap');
